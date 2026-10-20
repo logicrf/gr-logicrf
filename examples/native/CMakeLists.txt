@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+project(logicrf_native_example LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+find_package(gr-logicrf CONFIG REQUIRED)
+find_package(Gnuradio 3.10.12 REQUIRED COMPONENTS blocks)
+add_executable(logicrf-native-mock mock_rx.cc)
+target_link_libraries(logicrf-native-mock PRIVATE logicrf::gnuradio-logicrf gnuradio::gnuradio-blocks)

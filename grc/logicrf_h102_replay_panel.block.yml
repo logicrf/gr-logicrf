@@ -1,0 +1,20 @@
+id: logicrf_h102_replay_panel
+label: H102 Replay Panel
+category: '[LogicRF]'
+flags: [python]
+parameters:
+- {id: plan, label: Replay Plan, dtype: raw, default: recording}
+- {id: throttles, label: Throttle Block Names, dtype: raw, default: "['throttle']"}
+- {id: spectra, label: Frequency/Waterfall Block Names, dtype: raw, default: "['spectrum', 'waterfall']"}
+- {id: times, label: Time Sink Block Names, dtype: raw, default: "['iq_time']"}
+- {id: observers, label: Observer Block Names (channel to name), dtype: raw, default: "{1: 'observer1'}"}
+- {id: gui_hint, label: GUI Hint, dtype: gui_hint, hide: part}
+templates:
+  imports: from gnuradio.logicrf.grc_replay import ReplayPanel
+  make: |-
+    ReplayPanel(self, ${plan}, throttles=lambda: [getattr(self, name) for name in ${throttles}], spectra=lambda: [getattr(self, name) for name in ${spectra}], times=lambda: [getattr(self, name) for name in ${times}], observers=lambda: {ch: getattr(self, name) for ch, name in ${observers}.items()})
+    ${gui_hint() % ('self.' + id)}
+documentation: |-
+  Options/Run=Off. Verifies files asynchronously; data path remains visible in GRC.
+  Only original Fs/frequency are used. No device connection, authentication, or RF TX.
+file_format: 1

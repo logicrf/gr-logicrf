@@ -1,0 +1,29 @@
+id: logicrf_h102_control
+label: H102 Control
+category: '[LogicRF]'
+parameters:
+- id: device
+  label: Shared Device
+  dtype: raw
+  default: h102_device
+inputs:
+- domain: message
+  id: command
+  optional: true
+outputs:
+- domain: message
+  id: events
+  optional: true
+templates:
+  imports: from gnuradio import logicrf
+  make: logicrf.h102_control(${device})
+documentation: |-
+  Bounded asynchronous command dictionary: action, optional id and action parameters.
+  Actions: status, profiles, select_profile(profile), tune(direction, frequency_hz),
+  rx_gain(channel, gain_db), tx_attenuation(attenuation_db), stop_rx, stop_tx, abort.
+  select_profile/tune/gain only plan the next start; they do not change active sample rates.
+  Gain plans require H102 Session. Profile rate changes also require updating DSP blocks.
+  Replies: status, action, id, result_json or error. JSON preserves 64-bit counters exactly.
+  Normal stop drains data; wait for the graph before closing the Device. Abort is cancellation.
+  Construction never connects or transmits; this block does not start the flowgraph.
+file_format: 1

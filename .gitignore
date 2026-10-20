@@ -1,0 +1,10 @@
+/build*/
+/install*/
+__pycache__/
+*.pyc
+*.so
+.pytest_cache/
+*.iq
+*.cf32
+*.h1mi
+*.partial

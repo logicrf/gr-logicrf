@@ -1,0 +1,76 @@
+options:
+  parameters:
+    author: LogicRF Technologies
+    category: '[LogicRF]'
+    description: h102_iio_tx_tone RF OFF by default; one shared owner
+    generate_options: qt_gui
+    id: h102_iio_tx_tone
+    output_language: python
+    run_options: run
+    title: h102_iio_tx_tone RF OFF by default; one shared owner
+  states:
+    coordinate:
+    - 0
+    - 0
+    rotation: 0
+    state: enabled
+blocks:
+- name: h102
+  id: logicrf_h102_iio_session
+  parameters:
+    backend: iio
+    host: DEVICE_IP
+    uri: ''
+    rx_channels: ()
+    tx_channels: (1,)
+    profile: 4msps-2mhz-common
+    sample_rate: '4000000'
+    rx_frequency: '1000000000'
+    tx_frequency: '1000000000'
+    rx_gain_db: '{}'
+    rf_enabled: 'False'
+    attenuation_db: '40'
+    sample_limit: '0'
+    tx_samples: '0'
+    usb_seconds: '0'
+  states:
+    coordinate:
+    - 32
+    - 30
+    rotation: 0
+    state: enabled
+- name: tone
+  id: analog_sig_source_x
+  parameters:
+    type: complex
+    samp_rate: '4000000'
+    waveform: analog.GR_COS_WAVE
+    freq: '250000'
+    amp: '0.25'
+    offset: '0'
+    phase: '0'
+  states:
+    coordinate:
+    - 32
+    - 200
+    rotation: 0
+    state: enabled
+- name: tx1
+  id: logicrf_h102_tx_sink
+  parameters:
+    board: h102
+    channel: '1'
+  states:
+    coordinate:
+    - 360
+    - 180
+    rotation: 0
+    state: enabled
+connections:
+- - tone
+  - '0'
+  - tx1
+  - '0'
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0

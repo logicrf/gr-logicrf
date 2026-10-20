@@ -1,0 +1,12 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+find_dependency(Gnuradio 3.10.12 COMPONENTS runtime)
+find_dependency(Threads)
+find_dependency(PkgConfig)
+pkg_check_modules(IIO REQUIRED IMPORTED_TARGET libiio>=0.23)
+pkg_check_modules(PULSE REQUIRED IMPORTED_TARGET libpulse>=15)
+if(IIO_VERSION VERSION_GREATER_EQUAL 1.0)
+  message(FATAL_ERROR "gr-logicrf requires libiio 0.x ABI")
+endif()
+include("${CMAKE_CURRENT_LIST_DIR}/LogicRFTargets.cmake")
+check_required_components(gr-logicrf)

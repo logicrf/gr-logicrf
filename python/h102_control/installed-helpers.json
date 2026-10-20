@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "origin_commit": "2d067c38194956768a18914de55240063df9e02e",
+  "purpose": "Requirements for helpers already installed by API36; ordinary API sessions never upload translated host helpers",
+  "helpers": {
+    "board_capture.py": {
+      "local_path": "control-runtime/h102_iio_demo/board_capture.py",
+      "local_sha256": "b86ed33de8df5833fe6e7f95bfff25c4b6b3c7f8726c45a36e6d16ddaf07887a",
+      "installed_sha256": "d1f30333f8fe58734396a22ed3040287a08aaaa0eca8d3ae3dd387b59eaa7360"
+    },
+    "board_radio.py": {
+      "local_path": "control-runtime/h102_iio_demo/board_radio.py",
+      "local_sha256": "63321cc6e864107a452dec98702d8dde1394635251d6e52b4a3679c8e54604e5",
+      "installed_sha256": "fd5dec1a90f33177f5cd2230a4fc6572c155fec8292eaa9f86040c8c082e0e33"
+    },
+    "board_session.py": {
+      "local_path": "control-runtime/h102_iio_demo/board_session.py",
+      "local_sha256": "78f0f67886c1d3e8037be905a76631e82fe896755bdd608cf70bfd93c2b02005",
+      "installed_sha256": "df4ca96578cde57692f0e5500a529e21d9b97a43d37b577b24284960bf8487d8"
+    },
+    "board_tx.py": {
+      "local_path": "control-runtime/h102_iio_demo/board_tx.py",
+      "local_sha256": "64a9ceeb140c955bb4a0fb1d00dd44a25870c2023dd6dc026e919ddaf9095108",
+      "installed_sha256": "ae2e1a352e77643e5f583690ca573b2dfca9952eb55e8b2f310522adea7f290b"
+    },
+    "tx_cyclic.py": {
+      "local_path": "control-runtime/h102_iio_demo/tx_cyclic.py",
+      "local_sha256": "04897c96b4c5dacb7f7e0bb565f9c01b2f0f8d527228b7eb2e1b4da7e9c4b313",
+      "installed_sha256": "c2db6ed391c2c0df40ecdddbf936e70916b0a7bfeed1a85bed7616853304764d"
+    },
+    "board_fm_scan_stream.py": {
+      "local_path": "python/logicrf/board_fm_scan_stream.py",
+      "local_sha256": "a9f21d5dbda3e98b717f4cb579337e58fca0bc2bd5aff5aafe078c3ce6bfd59e",
+      "installed_sha256": "6d046b86c1c3a455db7f7afa5deb7b0294d4cde45ed50aa5d44d5e702130fb97"
+    },
+    "board_fm_stream.py": {
+      "local_path": "python/logicrf/board_fm_stream.py",
+      "local_sha256": "9c4045cca2823ffdd48ebdf7ad427aba85b54323d76deeed5437d2f1c1775244",
+      "installed_sha256": "ea6a3cf4227beced7df14a360fcc5cc94fa4f569481e02fad5d117a32ebe1879"
+    },
+    "board_iio_stream.py": {
+      "local_path": "python/logicrf/board_iio_stream.py",
+      "local_sha256": "83cc834f5c568da303f641688feb4db923f9d6f959ffe220ee7ab85e275d4ebf",
+      "installed_sha256": "2bd951f5a04a15b89ccc55ffb104a2824b89c9763ff6227baa7b9ea594e2c693"
+    },
+    "board_iio_tx.py": {
+      "local_path": "python/logicrf/board_iio_tx.py",
+      "local_sha256": "f60783a03598f7f176bcd772ac76a3a60d6652168c2e312eee50903350d71bec",
+      "installed_sha256": "d066cf65dbfee0595993ab1fd104b3bdb97cac3e48067999c10447469a173636"
+    },
+    "board_rx_batch_stream.py": {
+      "local_path": "python/logicrf/board_rx_batch_stream.py",
+      "local_sha256": "c4ae63459bbf9e2b03c6451cde920b6278adf9f5938dfe90ca5734e73b712b9f",
+      "installed_sha256": "a414ebe99eb008bc3b318adab25d7d0562a8be3d1aa37ca3a1abe3b4470e50dd"
+    },
+    "board_rx_stream.py": {
+      "local_path": "python/logicrf/board_rx_stream.py",
+      "local_sha256": "6423958e4cea6b1f09c402a5ca0341252e382c3ab288a7b22d852ce96a133ddc",
+      "installed_sha256": "8a2abbc880e90a09376b13c5eb08c40ee5a3e7f8138ac1aa3d825e3fc4a1572c"
+    },
+    "gr_usb_radio.py": {
+      "local_path": "python/logicrf/board_usb_radio.py",
+      "local_sha256": "abfd26784616aa3fd1ff70da9acfa30d42eba132a35e551437d650fcf93b9f04",
+      "installed_sha256": "c7be86109af581867f6d1a560c7267e074fe35606c6717b90216d203ca8b77db"
+    },
+    "gr_usb_reuse.py": {
+      "local_path": "python/logicrf/gr_usb_reuse.py",
+      "local_sha256": "e2557ef10cbfa8c229a3566fe036f373501c1a9a0d0c0f6ee69e09c886560ea6",
+      "installed_sha256": "4aee7cd9cc3457dfecda48d847252733e61d446a9b3bbdc36e2cb862149c5cae"
+    },
+    "usb_runtime_candidate.py": {
+      "local_path": "python/logicrf/usb_runtime_candidate.py",
+      "local_sha256": "eaded93ca8eddfe1884789a82c4120e5de4ddc12453f55615bcf0e8a3d0c3cc2",
+      "installed_sha256": "6e7200dd469af4c8d3d1dc22814b0f1899c22e648a8efa2212abaef3ff8c26ee"
+    },
+    "usb_rx_reuse_candidate.py": {
+      "local_path": "python/logicrf/usb_rx_reuse_candidate.py",
+      "local_sha256": "130cab29f0b6bd9259a3f275a6aa2f7cff10f091dfc2e132b0a8936a670272df",
+      "installed_sha256": "d567bb305dd24a013d8052aac1ebf492b63127a5ed0c09a2f9d5b29e80a9133c"
+    }
+  }
+}

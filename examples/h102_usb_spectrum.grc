@@ -1,0 +1,115 @@
+options:
+  parameters:
+    author: LogicRF Technologies
+    category: '[LogicRF]'
+    description: h102_usb_spectrum IP only; RX only
+    generate_options: qt_gui
+    id: h102_usb_spectrum
+    output_language: python
+    run_options: run
+    title: h102_usb_spectrum IP only; RX only
+  states:
+    coordinate:
+    - 0
+    - 0
+    rotation: 0
+    state: enabled
+blocks:
+- name: h102
+  id: logicrf_h102_iio_session
+  parameters:
+    backend: usb
+    host: DEVICE_IP
+    uri: ''
+    rx_channels: (1,2)
+    tx_channels: ()
+    profile: 40msps-20mhz-common
+    sample_rate: '40000000'
+    rx_frequency: '1000000000'
+    tx_frequency: '1000000000'
+    rx_gain_db: '{1: 20, 2: 20}'
+    rf_enabled: 'False'
+    attenuation_db: '40'
+    sample_limit: '0'
+    tx_samples: '0'
+    usb_seconds: '0'
+  states:
+    coordinate:
+    - 32
+    - 30
+    rotation: 0
+    state: enabled
+- name: rx1
+  id: logicrf_h102_rx_source
+  parameters:
+    board: h102
+    channel: '1'
+  states:
+    coordinate:
+    - 32
+    - 270
+    rotation: 0
+    state: enabled
+- name: rx2
+  id: logicrf_h102_rx_source
+  parameters:
+    board: h102
+    channel: '2'
+  states:
+    coordinate:
+    - 32
+    - 340
+    rotation: 0
+    state: enabled
+- name: spectrum
+  id: qtgui_freq_sink_x
+  parameters:
+    type: complex
+    name: H102 RX
+    fftsize: '4096'
+    fc: '1000000000'
+    bw: '40000000'
+    nconnections: '2'
+    wintype: window.WIN_HANN
+    update_time: '0.1'
+    ymin: '-140'
+    ymax: '5'
+  states:
+    coordinate:
+    - 420
+    - 200
+    rotation: 0
+    state: enabled
+- name: waterfall
+  id: qtgui_waterfall_sink_x
+  parameters:
+    type: complex
+    name: RX1 Waterfall
+    fftsize: '1024'
+    fc: '1000000000'
+    bw: '40000000'
+    nconnections: '1'
+    wintype: window.WIN_HANN
+    update_time: '0.1'
+  states:
+    coordinate:
+    - 420
+    - 350
+    rotation: 0
+    state: enabled
+connections:
+- - rx1
+  - '0'
+  - spectrum
+  - '0'
+- - rx2
+  - '0'
+  - spectrum
+  - '1'
+- - rx1
+  - '0'
+  - waterfall
+  - '0'
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0

@@ -1,0 +1,24 @@
+id: logicrf_h102_rx_panel
+label: H102 RX Panel
+category: '[LogicRF]'
+flags: [python]
+parameters:
+- {id: board, label: H102 Session, dtype: raw, default: h102}
+- {id: observers, label: Observer Block Names (channel to name), dtype: raw, default: '{}'}
+- {id: displays, label: Frequency/Waterfall Block Names, dtype: raw, default: '[]'}
+- {id: audio, label: Audio Sink Block Name (empty = none), dtype: string, default: ''}
+- {id: fm, label: FM Station Controls, dtype: bool, default: 'False'}
+- {id: recording, label: Recording Plan Block Name (empty = none), dtype: string, default: ''}
+- {id: gui_hint, label: GUI Hint, dtype: gui_hint, hide: part}
+templates:
+  imports: from gnuradio.logicrf.grc_panel import RxPanel
+  make: |-
+    RxPanel(self, ${board}, observers=lambda: {ch: getattr(self, name) for ch, name in ${observers}.items()}, displays=lambda: [getattr(self, name) for name in ${displays}], audio=lambda: getattr(self, ${audio}, None), fm=${fm}, recording=lambda: getattr(self, ${recording}, None))
+    ${gui_hint() % ('self.' + id)}
+documentation: |-
+  Set Options/Run=Off; this panel starts the real generated top_block in a worker.
+  Names refer to graph block IDs, e.g. {1: 'observer1'}, ['spectrum'], speaker.
+  Native time plots support zoom, trigger and display pause through their control panels.
+  Closing the window and SIGINT/SIGTERM wait asynchronously for independent restore.
+  Profile/rate/channels are edited in the session block before regenerate/run.
+file_format: 1

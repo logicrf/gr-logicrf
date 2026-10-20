@@ -1,0 +1,25 @@
+id: logicrf_h102_tx_ramp_source
+label: H102 TX Digital Ramp (RF OFF)
+category: '[LogicRF]/Diagnostics'
+parameters:
+- id: board
+  label: H102 Device (TX)
+  dtype: raw
+  default: h102_device_0
+- id: channel
+  label: TX Channel
+  dtype: enum
+  default: '1'
+  options: ['1', '2']
+  option_labels: [TX1, TX2]
+outputs:
+- domain: stream
+  dtype: complex
+templates:
+  imports: from gnuradio import logicrf
+  make: logicrf.tx_ramp_source(${board}, ${channel})
+documentation: |-
+  Finite cf32 RAMP32 input for the real H102 digital SSI checker. This is not an RF waveform source.
+  Reads the owner's actual seed after the shared start barrier, then produces tx_samples for this channel.
+  Connect to the matching TX Sink channel using the same Device. No direct USB access occurs here.
+file_format: 1

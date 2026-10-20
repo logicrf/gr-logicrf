@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "version": "1.2.2rc2",
+  "module_base_commit": "002451b3c0a2ba470f6cc13d5b93cd6ca7b59cd9",
+  "control_base_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+  "control_source_map": "control-runtime/SOURCE-MAP.json",
+  "publication_scope": "GPL module source and minimal LogicRF control runtime; no vendor SDK, RTL, image, IQ or internal Git history",
+  "qualification": "OFFLINE_SOURCE_INSTALL_GRC_AND_MOCK_ONLY; existing hardware scope separate",
+  "delivery_language": "English",
+  "development_language": "Chinese",
+  "gitea_delivery_branch": "github-en",
+  "github_branch": "main",
+  "github_visibility": "private",
+  "translation_origin_commit": "2d067c38194956768a18914de55240063df9e02e",
+  "installed_helper_requirements": "python/h102_control/installed-helpers.json",
+  "distribution_change": "English user documentation, source comments and messages; installed helper identity adaptation; device firmware unchanged"
+}

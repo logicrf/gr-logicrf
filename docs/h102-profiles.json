@@ -1,0 +1,2213 @@
+{
+  "schema": 1,
+  "release": "1.2.0",
+  "source_repository": "hawk-h102-linux",
+  "source_commit": "441539671edaea3f57324663464d71742a0e3e5c",
+  "verification": "Declared profile manifests; actual device parameters are checked at session start",
+  "profiles": [
+    {
+      "id": "0p192msps-0p05mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 50000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 50000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 50000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 50000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "fbfd115f4417588b48642ed8017ea6c911d32df509d1d7942e04d71816440400",
+      "stream_sha256": "67602005df750856272e6470ee49feb9881756d15738cba148331d246ca7669a",
+      "manifest_sha256": "fe11a321b907fb5b93e65cf4e72a3cb4ef93c9be61e0718cb6171612ed34fc35"
+    },
+    {
+      "id": "0p192msps-0p05mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 50000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 50000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 50000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 50000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "660889b332144aaf61b0a0332e2e1a35dbe32f399121ebd646d2f42e9603ca3f",
+      "stream_sha256": "67602005df750856272e6470ee49feb9881756d15738cba148331d246ca7669a",
+      "manifest_sha256": "f0206ce46cc2d4200bd434be90f89be1d8a03bc670e81d4a3302b39226e8cc15"
+    },
+    {
+      "id": "0p192msps-0p1mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 100000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 100000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 100000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 100000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "5f6d2f24bfab0cbf01c16bbe4f63bb94cb50029d922a68f63cbe330323de346d",
+      "stream_sha256": "67602005df750856272e6470ee49feb9881756d15738cba148331d246ca7669a",
+      "manifest_sha256": "f8424cc8fab89981337353dceaac9cfa6d4a3ba9bee9f9962d12d039bd392087"
+    },
+    {
+      "id": "0p192msps-0p1mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 100000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 100000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 100000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 192000,
+            "rf_bandwidth_hz": 100000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "06a966e3d8ec167bf9794ca1a3785ce65317992951c1f30a8cf38ce41bbb4dac",
+      "stream_sha256": "67602005df750856272e6470ee49feb9881756d15738cba148331d246ca7669a",
+      "manifest_sha256": "ca9dbe2fd9d6de566473b52230d7c31e29ebbc13187c375905d32855cbdf8e0b"
+    },
+    {
+      "id": "0p768msps-0p2mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 768000,
+            "rf_bandwidth_hz": 200000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 768000,
+            "rf_bandwidth_hz": 200000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 768000,
+            "rf_bandwidth_hz": 200000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 768000,
+            "rf_bandwidth_hz": 200000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "94c86990ac49b47fb13d0c1f29fa357634661b35ed7290bb8091b27b3ce64c5f",
+      "stream_sha256": "67602005df750856272e6470ee49feb9881756d15738cba148331d246ca7669a",
+      "manifest_sha256": "d5c250e393ea1ec39ecd5d4a9a1345d53ff705f3d24a4ef8621fd08ffac860a8"
+    },
+    {
+      "id": "0p768msps-0p2mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 768000,
+            "rf_bandwidth_hz": 200000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 768000,
+            "rf_bandwidth_hz": 200000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 768000,
+            "rf_bandwidth_hz": 200000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 768000,
+            "rf_bandwidth_hz": 200000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "9670e86f2dea6a2decca5dea2f402ce70946ac1f7a6ffcfaed64bb3147e9f083",
+      "stream_sha256": "67602005df750856272e6470ee49feb9881756d15738cba148331d246ca7669a",
+      "manifest_sha256": "b5f332f0ef3ad372bf22a15589429623a9134b126c7d8c903a17b872b5ab92f4"
+    },
+    {
+      "id": "10msps-5mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 10000000,
+            "rf_bandwidth_hz": 5000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 10000000,
+            "rf_bandwidth_hz": 5000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 10000000,
+            "rf_bandwidth_hz": 5000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 10000000,
+            "rf_bandwidth_hz": 5000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "d0f1fe4122eb8955e0491af291d69129ca2b9d35fd45c40fb1a0f0ce8bc9c6a4",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "542868ba0e8e2a8007fc4d9e3ae75dee873e8ebc21e9f5295edf5de1cfd4d685"
+    },
+    {
+      "id": "10msps-5mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 10000000,
+            "rf_bandwidth_hz": 5000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 10000000,
+            "rf_bandwidth_hz": 5000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 10000000,
+            "rf_bandwidth_hz": 5000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 10000000,
+            "rf_bandwidth_hz": 5000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "a1fc7b826ecbdb46b7d5297de96c2b592a30a84a38c027390c475a22af4f1f35",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "0797ea8344ca9d94bbb0ce93cf915773ed08d0750c4df1754b8a3eedf111af88"
+    },
+    {
+      "id": "16msps-2mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "40b3342de154e141ee7f3757838322c879fd1920f7cade2786d9d35eee402e4b",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "7bb2c0be197b56bcd953144ab720524e20e210b8eb59e79136df1f638a57752c"
+    },
+    {
+      "id": "16msps-2mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "2eec1cda2b3ccf58b34c48da7cb89cae80c0c59109997fe36f2608f4c52b0693",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "8b8f0395ca04df47d28d6c3b2d798912a299b44ad2d8a8c5deeca4abaeb56b0e"
+    },
+    {
+      "id": "16msps-4mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 4000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 4000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 4000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 4000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "e1881e02b5d82533f92dc6a37908e3f609ad78f312013f2e47b536ca86d56f4f",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "369a1e0e77fb4bc3ee3d1bc84d2c8f665f11a516e1c9f8f4d4a939851772daf3"
+    },
+    {
+      "id": "16msps-4mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 4000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 4000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 4000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 4000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "a594c2c63af14f7c17705d643e1983202b46da7c940d63b91a8a98bad49c2ea4",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "49b8614978b75a64072e1819c600d801a34257510df9aa5cc1905f367380927f"
+    },
+    {
+      "id": "16msps-8mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 8000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 8000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 8000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 8000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "cb830864beb3a31e0921609e349004fd4020b2e582fae64d6a33347a2f363326",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "d9468c373095a410275c56ae9f653c4a44dcb46b88aa93ad798b145aa8027089"
+    },
+    {
+      "id": "16msps-8mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 8000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 8000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 8000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 16000000,
+            "rf_bandwidth_hz": 8000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "f720aa626df294515de5ef049f9683805b29d4215b675d6c2550c8adcde7a1fc",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "90e0924d40b48918ee2f9b0ecfa213441f8b5bde722ea85f46ab6182d0b3bab7"
+    },
+    {
+      "id": "1p536msps-0p5mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 500000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 500000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "820f31c5208714d772b0ce5608d005bcc2946d06a20683874b0b13a46bd14e6d",
+      "stream_sha256": "67602005df750856272e6470ee49feb9881756d15738cba148331d246ca7669a",
+      "manifest_sha256": "e647b76f99c535a2c1df723da410526bdbfcbfb3911502c0d38604e4b0ace84b"
+    },
+    {
+      "id": "1p536msps-0p5mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 500000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 500000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "3138ba2ce9934e104d0b99782a3643123c462ba19454dbd9a23b5874ed92b19a",
+      "stream_sha256": "67602005df750856272e6470ee49feb9881756d15738cba148331d246ca7669a",
+      "manifest_sha256": "2a482b2cc3cb0465c755f725690b541ce14f4a4a3f2d4a97b33aced9700ee531"
+    },
+    {
+      "id": "1p536msps-1mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "037af6dc138ae9809daec9123009ad9a0cc06537dc691e1077dc15dc1dd0ae22",
+      "stream_sha256": "67602005df750856272e6470ee49feb9881756d15738cba148331d246ca7669a",
+      "manifest_sha256": "b3f7faeaf9f9958f168335155e13ae1d7a3b0cd9e9996972c12f819bb1b150fd"
+    },
+    {
+      "id": "1p536msps-1mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 1536000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "36872ca38e8c6da117f9ca37f996e05a23ce051ef9be226d317d9b94b48206b7",
+      "stream_sha256": "67602005df750856272e6470ee49feb9881756d15738cba148331d246ca7669a",
+      "manifest_sha256": "1d9a64103cd884d94f13650c49bc1e6060ab6bfedc39457cf641c82b2003ffca"
+    },
+    {
+      "id": "20msps-10mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 10000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 10000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 10000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 10000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "158646e0f30758ec22c1fea83074bec77dcda62732799e5ecafd6491424dfe4f",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "222be5756b47b2870cf4de938d9bd9df358d8979d56bc332ea7cce232539c509"
+    },
+    {
+      "id": "20msps-10mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 10000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 10000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 10000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 10000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "f1656c7518b4409b700c048e53e612a1b5a43c2cf07468a1f679bc093a0a8bd8",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "279bc7fdadb631f7ea9851430607a9b64a4a8b2da94842ba907c15022d656e7f"
+    },
+    {
+      "id": "20msps-5mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 5000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 5000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 5000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 5000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "7d1f3bfea0069826565a4a42ba5135b8014834ebfc588111ec5497004968797e",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "18ba2eef702180db4fb310abb2076345d345a3a269f5e78925a8cdeae9ba1ee3"
+    },
+    {
+      "id": "20msps-5mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 5000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 5000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 5000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 20000000,
+            "rf_bandwidth_hz": 5000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "e76869eac47acb6363c2b7a725713d4e3e9dc7c3ecaef3cfbf9b9bce644cb3d6",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "d5ab3cc01b2b7d9596f5c0752df0cd9d348c9c13e9d0a1edc8dfef86ca899f83"
+    },
+    {
+      "id": "23p04msps-15mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 23040000,
+            "rf_bandwidth_hz": 15000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 23040000,
+            "rf_bandwidth_hz": 15000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 23040000,
+            "rf_bandwidth_hz": 15000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 23040000,
+            "rf_bandwidth_hz": 15000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "0f9bf0655cdf94a1dce37633b4496ca9ce4ddc53f9f56b6679b4d827af9955bd",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "ded4bc1391a7fbfd4bfe30d876206459ae8ee26b73345165ed87a4a39ee82329"
+    },
+    {
+      "id": "23p04msps-15mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 23040000,
+            "rf_bandwidth_hz": 15000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 23040000,
+            "rf_bandwidth_hz": 15000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 23040000,
+            "rf_bandwidth_hz": 15000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 23040000,
+            "rf_bandwidth_hz": 15000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "188e8c32f2cb8c2e44f0f44af467cb79bc589a7e931413bd9a483f57c275483f",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "497a72fc58db83590a06a68594e233716deec790eff49ebcc48c39c55874995e"
+    },
+    {
+      "id": "2msps-0p25mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 250000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 250000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 250000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 250000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "c6c476930c3bd087501a8c5c0de0cfdd0372429a3a64fd6abf7ce4eb3ec6042a",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "646b58233f66495d3563e4a8e67d3d94b0d9907818c6ea21a66c49604f912d6b"
+    },
+    {
+      "id": "2msps-0p25mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 250000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 250000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 250000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 250000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "465a19029c8397d2542a2cdec99689d0dbaa0f73535a104b1c25cab31f06dddb",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "c5407ff0e0bb9232d63ac5ff6fb120fdfad209e34ac6671ad531674709c6d34e"
+    },
+    {
+      "id": "2msps-0p5mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 500000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 500000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "836d53ec662f66e578e2b2d328ec1b0c6a294fa05b7a04753ef0f7aef271e6fa",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "167686572e66839886de34aa4de456b7b9ae770ff63084bf79658d3f744475f0"
+    },
+    {
+      "id": "2msps-0p5mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 500000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 500000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "18c46437c3e6eb5e794ffe05bb630eb44f2bd567f511b7d1771c4b10404d1b36",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "e410c287e7f0b2a5ed2ad2666465c06c7a693bc202a0639b2680f474e2dec594"
+    },
+    {
+      "id": "2msps-1mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "fc97d71cb715decec359fa1178d40eab8b0633c2473801332079294f1ee01c8b",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "8bec812c2bc2fe9f52d33637550d8f95dc9a9da54b87038ae5042d7db5cdd510"
+    },
+    {
+      "id": "2msps-1mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 2000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "b3997dbfc0dcd070c7721391b554a8c83fdb2e40aefcbaa50fa38ea60c5e9090",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "3446ba17454b90a37a3940bbefa8f2efbccd1cd65f319a54b1798f9fb9c4f6e9"
+    },
+    {
+      "id": "30p72msps-15p36mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 15360000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 15360000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 15360000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 15360000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "363a72f65da4f366cd3b45c4c50d75faf07591f2a1626195a5faa01c6b628baa",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "33264cc0f827e5d0a621ee283f4a3f6dc4a03106c932d0fae903428c169d3ef1"
+    },
+    {
+      "id": "30p72msps-15p36mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 15360000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 15360000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 15360000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 15360000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "b355e5316ca8b8aaee43c1a2d129009e10d4977e1b6bf13604fbfdfda6d7a2f8",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "98a9ebb5871198ca11304a909a577a4b3b75c45eb52d941b2aab0eef96e0c46c"
+    },
+    {
+      "id": "30p72msps-20mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "0e87ee89614de1f6a1169605588cd359e3bbadc4cc409cc333eb5765052fbd6a",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "6145e23ffd1f6be0c6620045184b98470eca78b44e0514512ca343d6121f8048"
+    },
+    {
+      "id": "30p72msps-20mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 30720000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "fcd2f932992753ff0276fc02258bcbfedb2cb5f26b728db577d85eee953aa146",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "55da14894bcb8b701a7638fcfed92f563ae80a539b66ffa2009c8c1897b2cbc7"
+    },
+    {
+      "id": "40msps-10mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 10000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 10000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 10000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 10000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "b830ea799ca71bc46b62656cd120488086ed06c09b2e7e105d720cb6335dd860",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "d90ac8d6fe449a8fcdb4887554c9e0cb928b16e4bf1e0eab70c5775dce3b5b63"
+    },
+    {
+      "id": "40msps-10mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 10000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 10000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 10000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 10000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "9be6ba4d35f841c88177d7b82dc5324a4595656525d863bf7b57f47a87f24252",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "77fe42607405899da6b925f03193b02de2dabb8db06250aceb2cebf950a1efef"
+    },
+    {
+      "id": "40msps-20mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "4533ee5696994cf5f24dcc1662133a8a856cd09e521a24b2a0180ec5f7afcf83",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "8e954632877612d1a9f0a3360b4d6fb7396ccc07110384e26dd9bde810085abb"
+    },
+    {
+      "id": "40msps-20mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "264888311ce1d3c59abd7d4092e53962d661bcb5f0c23a5f261155f55961bac1",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "5df220e46a3aa4bba51ac37a56e30208396cb553cc0500a4ab46b1157001c3a8"
+    },
+    {
+      "id": "40msps-30mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 30000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 30000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 30000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 30000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "4c50e718897176062fcdf30e78b78ebbb2dc495e4222b94a188140353a85f17d",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "f80da68be58381206cd5fdd6e28d3ba26c126999c3a527aac7217f4552640c20"
+    },
+    {
+      "id": "40msps-30mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 30000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 30000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 30000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 40000000,
+            "rf_bandwidth_hz": 30000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "03d0a81c4072bc3594abbbd7910b5fd34ceec408b91b061a53049cb194547d80",
+      "stream_sha256": "43fe5ab70d0551b0065829a59637b6c9545396d8c3e75295b5bd0933a79923f3",
+      "manifest_sha256": "ca06707f1eff101ab9291299e4e6f22964f8af374e0af96db89d50a746f3cdc3"
+    },
+    {
+      "id": "4msps-0p5mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 500000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 500000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "feee2e33abc41aae0eac2c6d5c9c7669278c400b86cbf9a0939a4209b6cf3792",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "a5c5a0c841ac11b01e6b9e2a6cbf5c55cda97345d9e541e8ab49c1e0b0f78e47"
+    },
+    {
+      "id": "4msps-0p5mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 500000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 500000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 500000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "bfab98ab42ec9b3016a2a3eb996d4a9e3439a2cede07b5db6801209cdc4203f0",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "99f831de972d5ec88f9c9431f0ae3124250738be556ab91d1f11d6cc245c76ee"
+    },
+    {
+      "id": "4msps-1mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "162962dca14cd7de8b36eeea0beeda5f8e510a272b08adab4a4da4eb5e86ae70",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "6617d6fb2ed76fc47132c4d4d946207ac58cba5a09b1775987a3a10f5751b932"
+    },
+    {
+      "id": "4msps-1mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "ee5f69dbc7e7a0f037100fbdc70947954b8855fa7f490ec4c32eb3b88ae1d1dc",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "e0edbc7aef2637c570e20d061b19950c74d711dcfb9ff058b175d5c5369476db"
+    },
+    {
+      "id": "4msps-2mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "9754de4ea819d162c2e2bd9bb3305799258afe82e15de64e9293e06f4b001f09",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "b596a6fba95aa0bf6cacb34919f2759e2265d030af051eead1ff77694486cf12"
+    },
+    {
+      "id": "4msps-2mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 4000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "70cd531af1a33aab4bccd6cc8e7dab58246f62c8723537ca73299a0a60ced925",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "86441666140a773ac0a25015f307de633b701e50fc14ecec5958acb7f1b282a5"
+    },
+    {
+      "id": "61p44msps-20mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "dc1d6509d6673a4cb4321a54d4b211a5ea282f59a851aa2841cc4d1c5b1d81aa",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "419589327a75f4b76c943df23e3541b38d49e9fa8a40f2af5f5b0bdf6d2d28e4"
+    },
+    {
+      "id": "61p44msps-20mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 20000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 20000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "10cf07a26af4091dee9190e1ac0a5436dd4cec223202ffbb1422b601a04618d4",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "ce790fd2d2370af102b45c4713b599aee60c0355f21742e341345bdd591bea7a"
+    },
+    {
+      "id": "61p44msps-30mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 30000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 30000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 30000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 30000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "232d2063bae59f09b6abc4d65db6a0c396020beb726b760f52f3e40fa8c7b0bb",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "bf5dc6fd66fcc198907eaddda74d861034fcff6be010d2e5538f2bfc7bff516d"
+    },
+    {
+      "id": "61p44msps-30mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 30000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 30000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 30000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 30000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "8d28b3385048580b9f3e47e4441441c4e6a703f3be647027e765510e74715883",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "5122b6d8c202905f132098bd431541eae4296e39ea221dec63cd2b943d66b75e"
+    },
+    {
+      "id": "61p44msps-40mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 40000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 40000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 40000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 40000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "5acd9dacab7cea56cebc701f19b099f778dbc966019e289bdfcc2ec877e794d0",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "bb4c8968b64b570918c2f20bda116a49607ea106149bd6afe8ace1fdb3ebf4bc"
+    },
+    {
+      "id": "61p44msps-40mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 40000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 40000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 40000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 61440000,
+            "rf_bandwidth_hz": 40000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "871fd55718591b87e587af3f4dc487ebf59e3e745f5087a6ce2e3901e59111af",
+      "stream_sha256": "123925c8700ae139483e125fb050190ac2990f66f17cdf57509a2b5829cf6596",
+      "manifest_sha256": "1316128b7eac610c58b72fee9676f52c2b02fccd444d7c399f13898d8f9737f7"
+    },
+    {
+      "id": "8msps-1mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "56cd9bab4a4987ec358b3fd6b09fb51bf27a874dfe08d95adead2ec4cd2812f1",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "0de6302ef8be0f82946fc2a1ecac5b3a1fb09a7e49bbb4fbd2f342cb16f8d20a"
+    },
+    {
+      "id": "8msps-1mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 1000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 1000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "111fa2ffa87ba151f6bc82d7d539aacced731ee522a5b227629fae7ae6937011",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "0fe1a3e1ecc3168993d570ed521b5e3e05570bd9b38a0a6e4292d1201d5dc39e"
+    },
+    {
+      "id": "8msps-2mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "feafc981c6527ecf3b382d90f05fd316c08d11304d96511c84f7d3d2d867b832",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "eb0191865cbe7ace122f0cccc1c9a60300be622cce6dcb4a17e4bd763e6864ff"
+    },
+    {
+      "id": "8msps-2mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 2000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 2000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "120edc20f517833af54cd39ec31a688a7de3ba78159909d52b826611d8a3bdc4",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "96ce2eeabd50af1223224d27d1d8280633f90d30ac273d553e48e02fce2d4b03"
+    },
+    {
+      "id": "8msps-4mhz",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 4000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 4000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 4000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 4000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 1,
+        "tx2LoSelect": 1
+      },
+      "profile_sha256": "1de490c009e612183e2b1a52d401db16c0c57922ac8bcc015440842c1074f0aa",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "3608a234caa7d1d14bd87f2606e95b15d71d9dfb453db4c2c5f9fce38e7b46d5"
+    },
+    {
+      "id": "8msps-4mhz-common",
+      "parameters": {
+        "rx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 4000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 4000000
+          }
+        ],
+        "tx": [
+          {
+            "channel": 1,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 4000000
+          },
+          {
+            "channel": 2,
+            "sample_rate_hz": 8000000,
+            "rf_bandwidth_hz": 4000000
+          }
+        ]
+      },
+      "lo_mapping": {
+        "rx1LoSelect": 2,
+        "rx2LoSelect": 2,
+        "tx1LoSelect": 2,
+        "tx2LoSelect": 2
+      },
+      "profile_sha256": "37f449b3a45f81fed559fde688202f2baf9c8db2940788674d9c141496a1d394",
+      "stream_sha256": "a6cb976dbcc37571e2fc9e376c5cb8804824864ec4de43f13e439eb13b896266",
+      "manifest_sha256": "b5daaa71b7bd3922548011a3152253793a7f36c5326c0a1c02a9779d45324332"
+    }
+  ]
+}

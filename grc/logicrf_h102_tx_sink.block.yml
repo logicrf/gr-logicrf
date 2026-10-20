@@ -1,0 +1,33 @@
+id: logicrf_h102_tx_sink
+label: H102 TX Sink
+category: '[LogicRF]'
+flags: [throttle]
+parameters:
+- id: board
+  label: H102 Device (TX)
+  dtype: raw
+  default: h102_device_0
+- id: channel
+  label: TX Channel
+  dtype: enum
+  default: '1'
+  options: ['1', '2']
+  option_labels: [TX1, TX2]
+inputs:
+- domain: stream
+  dtype: complex
+outputs:
+- domain: message
+  id: events
+  optional: true
+templates:
+  imports: from gnuradio import logicrf
+  make: logicrf.h102_tx_sink(${board}, ${channel})
+documentation: |-
+  Per-channel normalized cf32 input, range [-1,+1]. NaN/Inf/out-of-range fail explicitly.
+  Consumes tx_samples per channel, without repeating the final block or zero-padding.
+  Bounded backpressure; early stop records cancellation. Mock, RF-OFF finite IIO and USB digital RAMP32 are supported.
+  USB TX requires explicit RAMP32 pattern and TX Digital Ramp source; arbitrary USB waveform TX is refused.
+  IIO submits caller IQ with noncyclic buffers. Check iio_submitted_samples and independent owner post.
+  Input acceptance and mock consumption do not prove USB transfer, SSI consumption or RF output.
+file_format: 1

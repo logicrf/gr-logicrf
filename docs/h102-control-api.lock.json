@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "canonical_repository": "hawk-h102-linux",
+  "canonical_path": "control-api/h102_control",
+  "client_version": "0.1.0",
+  "minimum_installation": "0.1.0-ip5",
+  "files": {
+    "python/h102_control/__init__.py": "9d333bcf17569550aa340a2d001202fe12d1dee34fa6c1e31066396067fd8430",
+    "python/h102_control/channel.py": "fb8df410d41e54e9dd512dfa4c918aef1c9d4d48a5152ae1d87d916186d5b95f",
+    "python/h102_control/client.py": "3d15c16fd5647c5afbec6d1d9f40c004f74c619b5d0f81a16609e39b70dee911",
+    "python/h102_control/compat.py": "c7655b945ed02b4a146ace8a0cf8cc1afdae7045fb21ef063ec9023e6e133da0",
+    "python/h102_control/protocol.py": "42c1eaba2b23833b9aa1452482f674deb080ac92821d8b6adf94fc48e378e459"
+  }
+}

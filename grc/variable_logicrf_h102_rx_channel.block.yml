@@ -1,0 +1,19 @@
+id: variable_logicrf_h102_rx_channel
+label: H102 RX Channel
+category: '[LogicRF]'
+flags: [show_id, python]
+parameters:
+- id: channel
+  label: RX Channel
+  dtype: enum
+  default: '1'
+  options: ['1', '2']
+  option_labels: [RX1, RX2]
+value: ${int(channel)}
+templates:
+  var_make: self.${id} = ${id} = ${channel}
+documentation: |-
+  Select before Generate/Run. Single-channel examples use this one definition for
+  the device plan, native Source, observer and recording/replay index channel.
+  Not a live channel switch; topology and ownership are constructed together.
+file_format: 1

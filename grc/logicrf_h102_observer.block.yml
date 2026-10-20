@@ -1,0 +1,14 @@
+id: logicrf_h102_observer
+label: H102 IQ Observer
+category: '[LogicRF]'
+flags: [python]
+inputs:
+- {domain: stream, dtype: complex}
+templates:
+  imports: from gnuradio import logicrf
+  make: logicrf.stream_probe(False)
+documentation: |-
+  C++ sink observes all IQ, not display-decimated samples. Latest work-block mean/RMS/peak/
+  clipping statistics and bounded latest metadata are queried by the panel at 5 Hz.
+  Counters alone do not prove ADC continuity; guard, queues and independent post are required.
+file_format: 1

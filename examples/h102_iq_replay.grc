@@ -1,0 +1,194 @@
+options:
+  parameters:
+    author: LogicRF Technologies
+    category: '[LogicRF]'
+    description: Editable dual RX with asynchronous lifecycle, raw IQ statistics and
+      time plots
+    generate_options: qt_gui
+    id: h102_iq_replay
+    output_language: python
+    run_options: run
+    title: LogicRF H102 IQ Replay · GRC
+    run: 'False'
+  states:
+    coordinate:
+    - 0
+    - 0
+    rotation: 0
+    state: enabled
+blocks:
+- name: spectrum
+  id: qtgui_freq_sink_x
+  parameters:
+    type: complex
+    name: H102 RX
+    fftsize: '4096'
+    fc: '1000000000'
+    bw: '4000000'
+    nconnections: '1'
+    wintype: window.WIN_HANN
+    update_time: '0.1'
+    ymin: '-140'
+    ymax: '5'
+    gui_hint: analysis@0:0,0
+  states:
+    coordinate:
+    - 420
+    - 200
+    rotation: 0
+    state: enabled
+- name: waterfall
+  id: qtgui_waterfall_sink_x
+  parameters:
+    type: complex
+    name: IQ Replay Waterfall
+    fftsize: '1024'
+    fc: '1000000000'
+    bw: '4000000'
+    nconnections: '1'
+    wintype: window.WIN_HANN
+    update_time: '0.1'
+    gui_hint: analysis@0:1,0
+  states:
+    coordinate:
+    - 420
+    - 350
+    rotation: 0
+    state: enabled
+- name: analysis
+  id: qtgui_tab_widget
+  parameters:
+    num_tabs: '2'
+    label0: RF spectrum
+    label1: I/Q time
+    gui_hint: 1,0,1,2
+  states:
+    coordinate:
+    - 700
+    - 30
+    rotation: 0
+    state: enabled
+- name: iq_time
+  id: qtgui_time_sink_x
+  parameters:
+    type: complex
+    name: I/Q — relative time
+    size: '4096'
+    srate: '4000000'
+    nconnections: '1'
+    ctrlpanel: 'True'
+    gui_hint: analysis@1:0,0
+  states:
+    coordinate:
+    - 700
+    - 250
+    rotation: 0
+    state: enabled
+- name: recording
+  id: logicrf_h102_replay_plan
+  parameters:
+    manifest: ~/h102-recordings/capture/recording.json
+    channels: (rx_channel,)
+  states:
+    coordinate:
+    - 30
+    - 30
+    rotation: 0
+    state: enabled
+- name: file_rx1
+  id: logicrf_h102_replay_file_source
+  parameters:
+    plan: recording
+    channel: rx_channel
+  states:
+    coordinate:
+    - 30
+    - 250
+    rotation: 0
+    state: enabled
+- name: tagger_rx1
+  id: logicrf_h102_replay_tagger
+  parameters:
+    plan: recording
+    channel: rx_channel
+  states:
+    coordinate:
+    - 240
+    - 250
+    rotation: 0
+    state: enabled
+- name: throttle
+  id: blocks_throttle
+  parameters:
+    type: complex
+    vlen: '1'
+    samples_per_second: '1000000'
+    ignoretag: 'True'
+  states:
+    coordinate:
+    - 460
+    - 250
+    rotation: 0
+    state: enabled
+- name: replay_panel
+  id: logicrf_h102_replay_panel
+  parameters:
+    plan: recording
+    throttles: '[''throttle'']'
+    spectra: '[''spectrum'', ''waterfall'']'
+    times: '[''iq_time'']'
+    gui_hint: 0,0,1,2
+    observers: '{rx_channel: ''observer1''}'
+  states:
+    coordinate:
+    - 30
+    - 120
+    rotation: 0
+    state: enabled
+- name: observer1
+  id: logicrf_h102_observer
+  parameters: {}
+  states:
+    coordinate:
+    - 500
+    - 450
+    rotation: 0
+    state: enabled
+- name: rx_channel
+  id: variable_logicrf_h102_rx_channel
+  parameters:
+    channel: '1'
+  states:
+    coordinate:
+    - 340
+    - 110
+    rotation: 0
+    state: enabled
+connections:
+- - file_rx1
+  - '0'
+  - tagger_rx1
+  - '0'
+- - tagger_rx1
+  - '0'
+  - throttle
+  - '0'
+- - throttle
+  - '0'
+  - spectrum
+  - '0'
+- - throttle
+  - '0'
+  - waterfall
+  - '0'
+- - throttle
+  - '0'
+  - iq_time
+  - '0'
+- - tagger_rx1
+  - '0'
+  - observer1
+  - '0'
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0

@@ -1,0 +1,33 @@
+id: logicrf_h102_rx_source
+label: H102 RX Source
+category: '[LogicRF]'
+flags: [throttle]
+parameters:
+- id: board
+  label: H102 Device
+  dtype: raw
+  default: h102_device_0
+- id: channel
+  label: RX Channel
+  dtype: int
+  default: '1'
+asserts:
+- ${channel in (1,2)}
+inputs:
+- domain: message
+  id: command
+  optional: true
+outputs:
+- domain: stream
+  dtype: complex
+- domain: message
+  id: events
+  optional: true
+templates:
+  imports: from gnuradio import logicrf
+  make: logicrf.h102_rx_source(${board}, ${channel})
+documentation: |-
+  Per-channel normalized cf32. Sources share the Device and a single worker.
+  Strict queue overflow stops the session. First output tags identify mock/rate/frequency/channel.
+  No rx_time is invented; mock is not physical RF or UTC verification.
+file_format: 1

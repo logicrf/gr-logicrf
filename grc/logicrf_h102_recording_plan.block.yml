@@ -1,0 +1,19 @@
+id: logicrf_h102_recording_plan
+label: H102 Recording Plan
+category: '[LogicRF]'
+flags: [show_id, python]
+parameters:
+- {id: board, label: H102 Session, dtype: raw, default: h102}
+- {id: directory, label: Recording Root Directory, dtype: string, default: '~/h102-recordings'}
+- {id: channels, label: RX Channels, dtype: raw, default: '(1,2)'}
+value: ${None}
+templates:
+  imports: from gnuradio.logicrf.grc_recording import RecordingPlan
+  var_make: |-
+    self.${id} = ${id} = RecordingPlan(${board}, ${directory}, ${channels})
+documentation: |-
+  No directory or device access at construction. Each Start creates a unique capture directory.
+  Connect every declared channel to an H102 Recording Sink; set this block name in RX Panel.
+  Stop drains all accepted IQ, restores owner, verifies counters/guard/index/full SHA, then commits manifest.
+  USB supports user-requested stop at complete accepted frame boundary, not exact ADC sample endpoint.
+file_format: 1

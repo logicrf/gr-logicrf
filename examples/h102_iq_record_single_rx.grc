@@ -1,0 +1,244 @@
+options:
+  parameters:
+    author: LogicRF Technologies
+    category: '[LogicRF]'
+    description: Editable dual RX with asynchronous lifecycle, raw IQ statistics and
+      time plots
+    generate_options: qt_gui
+    id: h102_iq_record_single_rx
+    output_language: python
+    run_options: run
+    title: LogicRF H102 Single RX Record · GRC
+    run: 'False'
+  states:
+    coordinate:
+    - 0
+    - 0
+    rotation: 0
+    state: enabled
+blocks:
+- name: h102
+  id: logicrf_h102_grc_rx_session
+  parameters:
+    backend: iio
+    host: DEVICE_IP
+    channels: (rx_channel,)
+    profile: radio_profile['profile']
+    sample_rate: radio_profile['rate_hz']
+    frequency: '1000000000'
+    gain_db: '20'
+    fm: 'False'
+    samples: radio_profile['rate_hz']
+  states:
+    coordinate:
+    - 32
+    - 30
+    rotation: 0
+    state: enabled
+- name: rx1
+  id: logicrf_h102_rx_source
+  parameters:
+    board: h102
+    channel: rx_channel
+  states:
+    coordinate:
+    - 32
+    - 270
+    rotation: 0
+    state: enabled
+- name: spectrum
+  id: qtgui_freq_sink_x
+  parameters:
+    type: complex
+    name: H102 RX
+    fftsize: '4096'
+    fc: '1000000000'
+    bw: radio_profile['rate_hz']
+    nconnections: '1'
+    wintype: window.WIN_HANN
+    update_time: '0.1'
+    ymin: '-140'
+    ymax: '5'
+    gui_hint: analysis@0:0,0
+  states:
+    coordinate:
+    - 420
+    - 200
+    rotation: 0
+    state: enabled
+- name: waterfall
+  id: qtgui_waterfall_sink_x
+  parameters:
+    type: complex
+    name: Selected RX Waterfall
+    fftsize: '1024'
+    fc: '1000000000'
+    bw: radio_profile['rate_hz']
+    nconnections: '1'
+    wintype: window.WIN_HANN
+    update_time: '0.1'
+    gui_hint: analysis@0:1,0
+  states:
+    coordinate:
+    - 420
+    - 350
+    rotation: 0
+    state: enabled
+- name: observer1
+  id: logicrf_h102_observer
+  parameters: {}
+  states:
+    coordinate:
+    - 250
+    - 100
+    rotation: 0
+    state: enabled
+- name: rx_panel
+  id: logicrf_h102_rx_panel
+  parameters:
+    board: h102
+    observers: '{rx_channel: ''observer1''}'
+    displays: '[''spectrum'', ''waterfall'']'
+    audio: ''
+    fm: 'False'
+    gui_hint: 0,0,1,2
+    recording: recording
+  states:
+    coordinate:
+    - 30
+    - 160
+    rotation: 0
+    state: enabled
+- name: analysis
+  id: qtgui_tab_widget
+  parameters:
+    num_tabs: '3'
+    label0: RF spectrum
+    label1: I/Q time
+    gui_hint: 1,0,1,2
+    label2: IQ magnitude vs time
+  states:
+    coordinate:
+    - 700
+    - 30
+    rotation: 0
+    state: enabled
+- name: iq_time
+  id: qtgui_time_sink_x
+  parameters:
+    type: complex
+    name: Selected RX I/Q — relative time
+    size: '4096'
+    srate: radio_profile['rate_hz']
+    nconnections: '1'
+    ctrlpanel: 'True'
+    gui_hint: analysis@1:0,0
+  states:
+    coordinate:
+    - 700
+    - 250
+    rotation: 0
+    state: enabled
+- name: recording
+  id: logicrf_h102_recording_plan
+  parameters:
+    board: h102
+    directory: ~/h102-recordings
+    channels: (rx_channel,)
+  states:
+    coordinate:
+    - 30
+    - 90
+    rotation: 0
+    state: enabled
+- name: record_rx1
+  id: logicrf_h102_recording_sink
+  parameters:
+    plan: recording
+    channel: rx_channel
+  states:
+    coordinate:
+    - 440
+    - 490
+    rotation: 0
+    state: enabled
+- name: magnitude_rx1
+  id: blocks_complex_to_mag
+  parameters:
+    vlen: '1'
+  states:
+    coordinate:
+    - 250
+    - 730
+    rotation: 0
+    state: enabled
+- name: magnitude_time
+  id: qtgui_time_sink_x
+  parameters:
+    type: float
+    name: IQ magnitude — relative time
+    size: '4096'
+    srate: radio_profile['rate_hz']
+    nconnections: '1'
+    ctrlpanel: 'True'
+    ymin: '0'
+    ymax: '1.5'
+    gui_hint: analysis@2:0,0
+  states:
+    coordinate:
+    - 700
+    - 650
+    rotation: 0
+    state: enabled
+- name: radio_profile
+  id: variable_logicrf_h102_profile
+  parameters:
+    preset: 4msps-2mhz-common
+  states:
+    coordinate:
+    - 340
+    - 30
+    rotation: 0
+    state: enabled
+- name: rx_channel
+  id: variable_logicrf_h102_rx_channel
+  parameters:
+    channel: '1'
+  states:
+    coordinate:
+    - 340
+    - 110
+    rotation: 0
+    state: enabled
+connections:
+- - rx1
+  - '0'
+  - spectrum
+  - '0'
+- - rx1
+  - '0'
+  - waterfall
+  - '0'
+- - rx1
+  - '0'
+  - observer1
+  - '0'
+- - rx1
+  - '0'
+  - iq_time
+  - '0'
+- - rx1
+  - '0'
+  - record_rx1
+  - '0'
+- - rx1
+  - '0'
+  - magnitude_rx1
+  - '0'
+- - magnitude_rx1
+  - '0'
+  - magnitude_time
+  - '0'
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0

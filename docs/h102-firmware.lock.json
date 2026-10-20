@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "product": "LogicRF Hawk H102 Kuiper",
+  "version": "1.2.0+grc-hotmeta-1",
+  "kernel": "6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1",
+  "metadata_sha256": "b7938d4b25fd141855da005c6f6bd3746ed39a5d022550e4e6f96704429d411c",
+  "metadata_path": "/etc/h102/sdk1-image.json",
+  "assets_count": 586,
+  "files_count": 587,
+  "boot_pins": {
+    "/boot/BOOT.BIN": "44b478bc7f38538f99d084551151639bef8ca5fbfc6378b26a564140d147a4b4",
+    "/boot/h102_logicrf_master.bit": "efa68686339a902c5aa6ffcd36db9f4e769b9dd5c796dcea75b6928f66fa33a2",
+    "/boot/image-sdk1.ub": "d4703c4f80c937a1bbf0dd7e8292f871ce2e9757bc221d32faaff7bd147470ea",
+    "/boot/uEnv.txt": "ad835b95585c58cb9b5d18344cbe9604dca8cbe16bba536eeb0d064b4fd8f3b5"
+  },
+  "links": {
+    "/etc/systemd/system/multi-user.target.wants/h102-gnss-uart-baseline.service": "../h102-gnss-uart-baseline.service",
+    "/etc/systemd/system/multi-user.target.wants/h102-profile-control.service": "../h102-profile-control.service",
+    "/etc/systemd/system/multi-user.target.wants/h102-sdk1-bootstrap.service": "../h102-sdk1-bootstrap.service",
+    "/etc/systemd/system/multi-user.target.wants/h102-network-affinity.service": "../h102-network-affinity.service"
+  },
+  "profiles": [
+    "0p192msps-0p05mhz",
+    "0p192msps-0p05mhz-common",
+    "0p192msps-0p1mhz",
+    "0p192msps-0p1mhz-common",
+    "0p768msps-0p2mhz",
+    "0p768msps-0p2mhz-common",
+    "10msps-5mhz",
+    "10msps-5mhz-common",
+    "16msps-2mhz",
+    "16msps-2mhz-common",
+    "16msps-4mhz",
+    "16msps-4mhz-common",
+    "16msps-8mhz",
+    "16msps-8mhz-common",
+    "1p536msps-0p5mhz",
+    "1p536msps-0p5mhz-common",
+    "1p536msps-1mhz",
+    "1p536msps-1mhz-common",
+    "20msps-10mhz",
+    "20msps-10mhz-common",
+    "20msps-5mhz",
+    "20msps-5mhz-common",
+    "23p04msps-15mhz",
+    "23p04msps-15mhz-common",
+    "2msps-0p25mhz",
+    "2msps-0p25mhz-common",
+    "2msps-0p5mhz",
+    "2msps-0p5mhz-common",
+    "2msps-1mhz",
+    "2msps-1mhz-common",
+    "30p72msps-15p36mhz",
+    "30p72msps-15p36mhz-common",
+    "30p72msps-20mhz",
+    "30p72msps-20mhz-common",
+    "40msps-10mhz",
+    "40msps-10mhz-common",
+    "40msps-20mhz",
+    "40msps-20mhz-common",
+    "40msps-30mhz",
+    "40msps-30mhz-common",
+    "4msps-0p5mhz",
+    "4msps-0p5mhz-common",
+    "4msps-1mhz",
+    "4msps-1mhz-common",
+    "4msps-2mhz",
+    "4msps-2mhz-common",
+    "61p44msps-20mhz",
+    "61p44msps-20mhz-common",
+    "61p44msps-30mhz",
+    "61p44msps-30mhz-common",
+    "61p44msps-40mhz",
+    "61p44msps-40mhz-common",
+    "8msps-1mhz",
+    "8msps-1mhz-common",
+    "8msps-2mhz",
+    "8msps-2mhz-common",
+    "8msps-4mhz",
+    "8msps-4mhz-common"
+  ],
+  "logical_profile_count": 29,
+  "default_profile": "40msps-20mhz",
+  "api_version": "68.21.6",
+  "firmware_version": "1.0.2",
+  "stream_version": "0.7.22.0",
+  "source_release": "039dab077b1c14e57fff5f5855beba41e69064dd",
+  "source_artifact": "releases/LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz.json",
+  "base_release": "1.2.0",
+  "addon": {
+    "version": "1.2.0-grc-hotmeta-1",
+    "compiled_commit": "709b2d882728e820da51221a3a4aaf81eedf570d",
+    "routed_sha256": "f3309e8b1211629fcb88ab5e18699aac66eb978ed2e0f4b09b92a28c73ba67b1",
+    "changes": {
+      "/usr/local/lib/h102/sdk1/scripts/h102_profile_config.py": {
+        "before": "4f1f788224ff858731393dd02e9e1d09a5ac12e3160f8d5363312e187ecdb4c8",
+        "after": "624757047f1e7a6e68e47c2535d5c49ad26cad37228438e4b8c0a796e4a7b44d"
+      },
+      "/usr/local/lib/h102/sdk1/scripts/h102_runtime_profile.py": {
+        "before": "316db9bea733465f2b3ce036867aafb5d6ca11cdae0dd5775c88a1268c6e0cfe",
+        "after": "6d05b4a83b079749d33c0546ca926612f0bb8a0e7896e111acd35b871812db9b"
+      },
+      "/usr/local/lib/h102/sdk1/scripts/h102_runtime_usb_prepare.py": {
+        "before": "ac3c1fbc9f68eaeba9ff04f95c82a085aadec1d049c40804f8fd72abc428091c",
+        "after": "acdfab23164c9bd6d2c33e3d6275826ebbd79f00116c50d75b824a593b9ccbf9"
+      },
+      "/usr/local/lib/h102/sdk1/scripts/h102_runtime_usb_rx.py": {
+        "before": "0d126e5d6ff0d3036ffbeb35b28649be8f729ff882e2414efd695279d9a60ee4",
+        "after": "9bc20258885010524ed88c161374e9f7ec80863d0cbf8b9604f9173f47da506b"
+      },
+      "/boot/h102_logicrf_master.bit": {
+        "before": "d81b6988b5f52b2fe1e03a86ba23508d7096560a9a60e011fd17c71c199974aa",
+        "after": "efa68686339a902c5aa6ffcd36db9f4e769b9dd5c796dcea75b6928f66fa33a2"
+      },
+      "/etc/h102/sdk1-image.json": {
+        "before": "bb8fcb03fdc2afad42b890217d0408240b61bcc19cbd9d442378440fd7d6e95b",
+        "after": "b7938d4b25fd141855da005c6f6bd3746ed39a5d022550e4e6f96704429d411c"
+      }
+    }
+  },
+  "base_image": {
+    "raw_bytes": 11823742976,
+    "raw_sha256": "22b21bf4deb2a66b7bfc2c57cca34797e475252c7d6c7a14b28a981c536f978d",
+    "compressed_bytes": 2759144392,
+    "compressed_sha256": "5a09380de3cea3219cc2ffb2cff2a2281e03b5e1c2fee2070c4e77aa9cd170a7",
+    "image_filename": "LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz"
+  }
+}

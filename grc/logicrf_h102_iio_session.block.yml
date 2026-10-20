@@ -1,0 +1,85 @@
+id: logicrf_h102_iio_session
+label: H102 Session (IIO / USB)
+category: '[LogicRF]'
+flags: [show_id]
+parameters:
+- id: backend
+  label: Data Backend
+  dtype: string
+  default: iio
+  options: [iio, usb]
+- id: usb_seconds
+  label: USB Window (0 = continuous)
+  dtype: int
+  default: 0
+- id: host
+  label: Device IP
+  dtype: string
+  default: DEVICE_IP
+- id: uri
+  label: Board IIO URI
+  dtype: string
+  default: ''
+  hide: part
+- id: rx_channels
+  label: RX Channels (empty = none)
+  dtype: raw
+  default: (1,)
+- id: tx_channels
+  label: TX Channels (empty = none)
+  dtype: raw
+  default: ()
+- id: profile
+  label: Configuration ID
+  dtype: string
+  default: 8msps-4mhz-common
+- id: sample_rate
+  label: Sample Rate (Hz)
+  dtype: real
+  default: 8000000
+- id: rx_frequency
+  label: RX Center (Hz)
+  dtype: real
+  default: 1000000000
+- id: tx_frequency
+  label: TX Center (Hz)
+  dtype: real
+  default: 1000000000
+- id: rx_gain_db
+  label: RX Gain Plan (channel to dB)
+  dtype: raw
+  default: '{}'
+- id: rf_enabled
+  label: Enable Selected TX RF
+  dtype: bool
+  default: 'False'
+- id: attenuation_db
+  label: TX Attenuation (dB)
+  dtype: real
+  default: 40
+- id: sample_limit
+  label: RX Samples Per Channel (0 = continuous)
+  dtype: int
+  default: 0
+- id: tx_samples
+  label: TX Samples Per Channel (0 = continuous)
+  dtype: int
+  default: 0
+value: ${None}
+templates:
+  imports: from gnuradio import logicrf
+  var_make: |-
+    self.${id} = ${id} = logicrf.make_duplex_device(backend=${backend}, usb_seconds=${usb_seconds}, uri=(${uri} or ('ip:' + ${host})), rx_channels=${rx_channels}, tx_channels=${tx_channels}, configuration=${profile}, sample_rate=${sample_rate}, rx_frequency=${rx_frequency}, tx_frequency=${tx_frequency}, rx_gain_db=${rx_gain_db}, rf_enabled=${rf_enabled}, attenuation_db=${attenuation_db}, sample_limit=${sample_limit}, tx_samples=${tx_samples})
+documentation: |-
+  USB: single/dual RX-only or TX-only; mixed operation is exactly one RX and one TX.
+  USB aggregate IQ16 budget: 320 MB/s. No unsupported mode fallback.
+  One board owner for selected RX/TX channels. Connect every declared channel before start.
+  RX-only, TX-only and mixed operation are supported; RF is OFF unless explicitly enabled.
+  IIO aggregate validated admission is 64 MB/s IQ16 across both directions.
+  Representative modes: 1RX1TX at 8 MSPS, 2RX2TX at 4 MSPS. No implicit rate reduction.
+  Current gain plan range: RX -3..30 dB, TX attenuation 20..40 dB at 0.05 dB steps.
+  Hardware frequency/gain/profile readbacks occur at start; full original settings are restored.
+  Profile/clock changes require stopped graph and matching DSP rate. Shared LO frequencies must agree.
+  Enter ip:DEVICE_IP. The H102 fixed control API requires no Linux username/password.
+  IIO has no native ADC sequence or UTC tags. DMA overflow is checked independently.
+file_format: 1

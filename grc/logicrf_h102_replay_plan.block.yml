@@ -1,0 +1,17 @@
+id: logicrf_h102_replay_plan
+label: H102 Replay Plan
+category: '[LogicRF]'
+flags: [show_id, python]
+parameters:
+- {id: manifest, label: Recording Manifest, dtype: string, default: '~/h102-recordings/capture/recording.json'}
+- {id: channels, label: RX Channels, dtype: raw, default: '(1,)'}
+value: ${None}
+templates:
+  imports: from gnuradio.logicrf.grc_replay import ReplayPlan
+  var_make: |-
+    self.${id} = ${id} = ReplayPlan(${manifest}, ${channels})
+documentation: |-
+  Set completed GRC Recording Plan manifest. No file/device access at construction.
+  Replay Panel verifies full IQ/index SHA, applies original Fs/frequency before starting.
+  Native tagger restores H1MI time/config tags; no fake UTC for IIO recordings.
+file_format: 1

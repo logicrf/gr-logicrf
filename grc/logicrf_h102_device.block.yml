@@ -1,0 +1,80 @@
+id: logicrf_h102_device
+label: H102 Device
+category: '[LogicRF]'
+flags: [show_id]
+parameters:
+- id: direction
+  label: Direction
+  dtype: enum
+  default: rx
+  options: [rx, tx]
+  option_labels: [RX, TX - finite or continuous]
+- id: pattern
+  label: Stream Pattern
+  dtype: enum
+  default: normal
+  options: [normal, ramp32]
+  option_labels: [Normal IQ, USB digital RAMP32 - RF OFF]
+- id: tx_samples
+  label: TX Samples Per Channel
+  dtype: int
+  default: 65536
+- id: backend
+  label: Backend
+  dtype: enum
+  default: mock
+  options: [mock, iio, usb]
+  option_labels: [Mock - no hardware, Ethernet IIO - managed RX, USB3 - managed RX or digital TX candidate]
+- id: host
+  label: Device IP
+  dtype: string
+  default: DEVICE_IP
+- id: uri
+  label: Board Control / IIO URI
+  dtype: string
+  default: ''
+  hide: part
+- id: profile
+  label: Configuration Profile
+  dtype: string
+  default: active
+- id: sample_limit
+  label: IIO Samples Per Channel (0 = continuous)
+  dtype: int
+  default: 0
+- id: usb_seconds
+  label: USB Window (seconds)
+  dtype: int
+  default: 10
+- id: sample_rate
+  label: Sample Rate (Hz)
+  dtype: real
+  default: 1000000
+- id: center_frequency
+  label: Center Frequency (Hz)
+  dtype: real
+  default: 150000000
+- id: mock_samples
+  label: Mock Samples Per Channel (0 = continuous)
+  dtype: int
+  default: 65536
+value: ${None}
+templates:
+  imports: from gnuradio import logicrf
+  var_make: |-
+    self.${id} = ${id} = logicrf.make_device(backend='${backend}', direction='${direction}', pattern='${pattern}', tx_samples=${tx_samples}, sample_rate=${sample_rate}, center_frequency=${center_frequency}, mock_samples=${mock_samples}, uri=(${uri} or ('ip:' + ${host})), configuration=${profile}, sample_limit=${sample_limit}, usb_seconds=${usb_seconds})
+documentation: |-
+  One shared Device for RX1 and RX2. Construction never connects.
+  TX supports finite mock, RF-OFF IIO noncyclic submission and RF-OFF USB digital RAMP32.
+  IIO submission counters do not prove SSI consumption. TX frequency must match current hardware.
+  USB TX requires the TX Digital Ramp source, a verified current TX frequency and installed p3b host guard.
+  tx_samples is per-channel finite length. Mock consumption does not prove SSI/RF transmission.
+  Normal device control uses the fixed H102 API on TCP 30432: enter ip:DEVICE_IP only.
+  Board control-service installation is a one-time administrator task; no SSH login at run time.
+  Profile sample rate must match the flowgraph declaration; combined RX IQ16 budget is 64 MB/s.
+  USB uses a separately installed root host guard and ordinary C++ data helper; RF TX stays off.
+  USB uses the fixed local Unix broker; no board or host sudo password is requested.
+  USB host service installation is required once on the host physically connected to FT601.
+  USB has native per-frame indices and integer time tags; IIO has no native ADC sequence/UTC tags.
+  Configuration and tuning require stopped flowgraph in this initial implementation.
+file_format: 1

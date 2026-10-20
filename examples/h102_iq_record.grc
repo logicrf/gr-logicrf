@@ -1,0 +1,357 @@
+options:
+  parameters:
+    author: LogicRF Technologies
+    category: '[LogicRF]'
+    description: Editable dual RX with asynchronous lifecycle, raw IQ statistics and
+      time plots
+    generate_options: qt_gui
+    id: h102_iq_record
+    output_language: python
+    run_options: run
+    title: LogicRF H102 IQ Record · GRC
+    run: 'False'
+  states:
+    coordinate:
+    - 0
+    - 0
+    rotation: 0
+    state: enabled
+blocks:
+- name: h102
+  id: logicrf_h102_grc_rx_session
+  parameters:
+    backend: iio
+    host: DEVICE_IP
+    channels: (1,2)
+    profile: radio_profile['profile']
+    sample_rate: radio_profile['rate_hz']
+    frequency: '1000000000'
+    gain_db: '20'
+    fm: 'False'
+    samples: radio_profile['rate_hz']
+  states:
+    coordinate:
+    - 32
+    - 30
+    rotation: 0
+    state: enabled
+- name: rx1
+  id: logicrf_h102_rx_source
+  parameters:
+    board: h102
+    channel: '1'
+  states:
+    coordinate:
+    - 32
+    - 270
+    rotation: 0
+    state: enabled
+- name: rx2
+  id: logicrf_h102_rx_source
+  parameters:
+    board: h102
+    channel: '2'
+  states:
+    coordinate:
+    - 32
+    - 340
+    rotation: 0
+    state: enabled
+- name: spectrum_rx1
+  id: qtgui_freq_sink_x
+  parameters:
+    type: complex
+    name: RX1 RF Spectrum
+    fftsize: '4096'
+    fc: '1000000000'
+    bw: radio_profile['rate_hz']
+    nconnections: '1'
+    wintype: window.WIN_HANN
+    update_time: '0.1'
+    ymin: '-140'
+    ymax: '5'
+    gui_hint: analysis@0:0,0,1,2
+  states:
+    coordinate:
+    - 420
+    - 200
+    rotation: 0
+    state: enabled
+- name: spectrum_rx2
+  id: qtgui_freq_sink_x
+  parameters:
+    type: complex
+    name: RX2 RF Spectrum
+    fftsize: '4096'
+    fc: '1000000000'
+    bw: radio_profile['rate_hz']
+    nconnections: '1'
+    wintype: window.WIN_HANN
+    update_time: '0.1'
+    ymin: '-140'
+    ymax: '5'
+    gui_hint: analysis@1:0,0,1,2
+  states:
+    coordinate:
+    - 420
+    - 340
+    rotation: 0
+    state: enabled
+- name: waterfall
+  id: qtgui_waterfall_sink_x
+  parameters:
+    type: complex
+    name: RX1 Waterfall
+    fftsize: '1024'
+    fc: '1000000000'
+    bw: radio_profile['rate_hz']
+    nconnections: '1'
+    wintype: window.WIN_HANN
+    update_time: '0.1'
+    gui_hint: analysis@6:0,0,1,2
+  states:
+    coordinate:
+    - 420
+    - 350
+    rotation: 0
+    state: enabled
+- name: observer1
+  id: logicrf_h102_observer
+  parameters: {}
+  states:
+    coordinate:
+    - 250
+    - 100
+    rotation: 0
+    state: enabled
+- name: observer2
+  id: logicrf_h102_observer
+  parameters: {}
+  states:
+    coordinate:
+    - 250
+    - 160
+    rotation: 0
+    state: enabled
+- name: rx_panel
+  id: logicrf_h102_rx_panel
+  parameters:
+    board: h102
+    observers: '{1: ''observer1'', 2: ''observer2''}'
+    displays: '[''spectrum_rx1'', ''spectrum_rx2'', ''waterfall'']'
+    audio: ''
+    fm: 'False'
+    gui_hint: 0,0,1,2
+    recording: recording
+  states:
+    coordinate:
+    - 30
+    - 160
+    rotation: 0
+    state: enabled
+- name: analysis
+  id: qtgui_tab_widget
+  parameters:
+    num_tabs: '7'
+    label0: RX1 spectrum
+    label1: RX2 spectrum
+    gui_hint: 1,0,1,2
+    label2: RX1 I/Q
+    label3: RX2 I/Q
+    label4: RX1 magnitude
+    label5: RX2 magnitude
+    label6: RX1 waterfall
+  states:
+    coordinate:
+    - 700
+    - 30
+    rotation: 0
+    state: enabled
+- name: iq_time_rx1
+  id: qtgui_time_sink_x
+  parameters:
+    type: complex
+    name: RX1 I/Q — relative time
+    size: '4096'
+    srate: radio_profile['rate_hz']
+    nconnections: '1'
+    ctrlpanel: 'True'
+    gui_hint: analysis@2:0,0,1,2
+  states:
+    coordinate:
+    - 700
+    - 250
+    rotation: 0
+    state: enabled
+- name: iq_time_rx2
+  id: qtgui_time_sink_x
+  parameters:
+    type: complex
+    name: RX2 I/Q — relative time
+    size: '4096'
+    srate: radio_profile['rate_hz']
+    nconnections: '1'
+    ctrlpanel: 'True'
+    gui_hint: analysis@3:0,0,1,2
+  states:
+    coordinate:
+    - 700
+    - 390
+    rotation: 0
+    state: enabled
+- name: recording
+  id: logicrf_h102_recording_plan
+  parameters:
+    board: h102
+    directory: ~/h102-recordings
+    channels: (1,2)
+  states:
+    coordinate:
+    - 30
+    - 90
+    rotation: 0
+    state: enabled
+- name: record_rx1
+  id: logicrf_h102_recording_sink
+  parameters:
+    plan: recording
+    channel: '1'
+  states:
+    coordinate:
+    - 440
+    - 490
+    rotation: 0
+    state: enabled
+- name: record_rx2
+  id: logicrf_h102_recording_sink
+  parameters:
+    plan: recording
+    channel: '2'
+  states:
+    coordinate:
+    - 440
+    - 560
+    rotation: 0
+    state: enabled
+- name: magnitude_rx1
+  id: blocks_complex_to_mag
+  parameters:
+    vlen: '1'
+  states:
+    coordinate:
+    - 250
+    - 730
+    rotation: 0
+    state: enabled
+- name: magnitude_rx2
+  id: blocks_complex_to_mag
+  parameters:
+    vlen: '1'
+  states:
+    coordinate:
+    - 250
+    - 810
+    rotation: 0
+    state: enabled
+- name: magnitude_time_rx1
+  id: qtgui_time_sink_x
+  parameters:
+    type: float
+    name: RX1 IQ magnitude — relative time
+    size: '4096'
+    srate: radio_profile['rate_hz']
+    nconnections: '1'
+    ctrlpanel: 'True'
+    ymin: '0'
+    ymax: '1.5'
+    gui_hint: analysis@4:0,0,1,2
+  states:
+    coordinate:
+    - 700
+    - 650
+    rotation: 0
+    state: enabled
+- name: magnitude_time_rx2
+  id: qtgui_time_sink_x
+  parameters:
+    type: float
+    name: RX2 IQ magnitude — relative time
+    size: '4096'
+    srate: radio_profile['rate_hz']
+    nconnections: '1'
+    ctrlpanel: 'True'
+    ymin: '0'
+    ymax: '1.5'
+    gui_hint: analysis@5:0,0,1,2
+  states:
+    coordinate:
+    - 700
+    - 790
+    rotation: 0
+    state: enabled
+- name: radio_profile
+  id: variable_logicrf_h102_profile
+  parameters:
+    preset: 4msps-2mhz-common
+  states:
+    coordinate:
+    - 340
+    - 30
+    rotation: 0
+    state: enabled
+connections:
+- - rx1
+  - '0'
+  - spectrum_rx1
+  - '0'
+- - rx2
+  - '0'
+  - spectrum_rx2
+  - '0'
+- - rx1
+  - '0'
+  - waterfall
+  - '0'
+- - rx1
+  - '0'
+  - observer1
+  - '0'
+- - rx2
+  - '0'
+  - observer2
+  - '0'
+- - rx1
+  - '0'
+  - iq_time_rx1
+  - '0'
+- - rx2
+  - '0'
+  - iq_time_rx2
+  - '0'
+- - rx1
+  - '0'
+  - record_rx1
+  - '0'
+- - rx2
+  - '0'
+  - record_rx2
+  - '0'
+- - rx1
+  - '0'
+  - magnitude_rx1
+  - '0'
+- - magnitude_rx1
+  - '0'
+  - magnitude_time_rx1
+  - '0'
+- - rx2
+  - '0'
+  - magnitude_rx2
+  - '0'
+- - magnitude_rx2
+  - '0'
+  - magnitude_time_rx2
+  - '0'
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0

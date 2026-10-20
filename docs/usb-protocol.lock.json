@@ -1,0 +1,26 @@
+{
+  "linux_commit": "441539671edaea3f57324663464d71742a0e3e5c",
+  "files": {
+    "h102_usb_tx_v3.h": "4d4ccaa54fa45846d61cc0dd6a8d30d60f3897dc36ee652aaf8b45eda6e00bbd",
+    "h102_usb_rx_stream_v3.h": "d81660b540d061e73ae74bb4e1b02d6f838e3426ed94f5489eadfba157f6528c",
+    "h102_rx_v3_observer.h": "6ea2f10523cfd396014b9e29c016bad979b4baccf91a1ff5cf113b6189ba6ab6",
+    "h102_usb_rx_stream.h": "b3b8acb5a6c2eb15475c930ffe6d3bb3f14b63b7030a04e4240f86254a90512b"
+  },
+  "transport_files": {
+    "h102_ft601_persistent_dma.c": "71a095c66d0e63c80f27088a699094a10de0e2787ce17053ac0f3ff7844bf5e8",
+    "h102_ft601_persistent_dma.h": "49aa6d24a9d44e7059903a1e570d9189635e127cf7a96739d8acf2600644cb28",
+    "h102_ft601_completion.h": "c8af3a2869b157d9647dba9d53422091707ec8b6d0497c2951ffc9d3b8b3dc33"
+  },
+  "upstream_files": {
+    "h102_usb_tx_v3.h": "18636caf6e07bb8b1357216d844ab2c200108b735aa3d97258b17ca70071b1f6",
+    "h102_usb_rx_stream_v3.h": "d87df1e69b0a111ee1a073f48941d497f0d025a2f01aab690590dafe0690e978",
+    "h102_rx_v3_observer.h": "e1d5667e85070263671b656bf0702f22f340f2f820f9b0f38906496804e4099c",
+    "h102_usb_rx_stream.h": "de614cf9dad4eb8844adb3d864101cc0613019251ab727447a6fcdb280dd1388"
+  },
+  "upstream_transport_files": {
+    "h102_ft601_persistent_dma.c": "49491f0c19a52e6dec413c70a6d98b64ee1a8a225e7ffe4290ebfe633e9fe24d",
+    "h102_ft601_persistent_dma.h": "8bfce2c1c05633f6fa1542537e8493ee837cac7a596ba5db5063c4d720125c87",
+    "h102_ft601_completion.h": "0a5f087ed4c6c74049b909126290bd5b86d5ac42687428ef86100cf333ae8665"
+  },
+  "modification": "English comments only; executable/preprocessor token equivalence is checked against upstream copies"
+}

@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "control-runtime/h102_iio_demo/__init__.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/__init__.py",
+      "source_sha256": "1fad47fb54b5988c977cdc10b31ea98203f3e2daced76f38427733100f9bd838",
+      "candidate_sha256": "7cfa62dc09b1de0828c4043da4ce27cf1c58356d8de421725a137542d5e019db",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/h102_iio_demo/backend.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/backend.py",
+      "source_sha256": "6dc655a7a384b00f0860851654c8584908cbf8a9072f43d6c6efbb934bbc9418",
+      "candidate_sha256": "2e87155e217c41b2719411fd939926fba94870785955ab768d3aca20657cd23f",
+      "modification": "English source documentation and diagnostics; host provenance excludes GUI files"
+    },
+    {
+      "path": "control-runtime/h102_iio_demo/board_capture.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/board_capture.py",
+      "source_sha256": "d1f30333f8fe58734396a22ed3040287a08aaaa0eca8d3ae3dd387b59eaa7360",
+      "candidate_sha256": "b86ed33de8df5833fe6e7f95bfff25c4b6b3c7f8726c45a36e6d16ddaf07887a",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/h102_iio_demo/board_radio.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/board_radio.py",
+      "source_sha256": "fd5dec1a90f33177f5cd2230a4fc6572c155fec8292eaa9f86040c8c082e0e33",
+      "candidate_sha256": "63321cc6e864107a452dec98702d8dde1394635251d6e52b4a3679c8e54604e5",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/h102_iio_demo/board_session.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/board_session.py",
+      "source_sha256": "df4ca96578cde57692f0e5500a529e21d9b97a43d37b577b24284960bf8487d8",
+      "candidate_sha256": "78f0f67886c1d3e8037be905a76631e82fe896755bdd608cf70bfd93c2b02005",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/h102_iio_demo/board_tx.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/board_tx.py",
+      "source_sha256": "ae2e1a352e77643e5f583690ca573b2dfca9952eb55e8b2f310522adea7f290b",
+      "candidate_sha256": "64a9ceeb140c955bb4a0fb1d00dd44a25870c2023dd6dc026e919ddaf9095108",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/h102_iio_demo/model.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/model.py",
+      "source_sha256": "98a3a63abb2c19ec96e7a10fa07315858e383eddd67f44469317c83dc7e2cb94",
+      "candidate_sha256": "21776aed0e716de40c18f1ce6fb94f46b656111b26a36dfeba9cb8da305e36b4",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/h102_iio_demo/recorder.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/recorder.py",
+      "source_sha256": "c7f6537eb86640214a883795a97f9539e0dd02a22591eb02de82d98a8d33942f",
+      "candidate_sha256": "ae484bbfdd16b9232c2764ba1fa3c1d5254b211662e66fbf35c0d9b5530992f5",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/h102_iio_demo/session_link.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/session_link.py",
+      "source_sha256": "1e626616c6de715f7edfa4a71ebabf6f858e5dff9d0729586bac173017253741",
+      "candidate_sha256": "31b815c253b928c19a13857343002c4d59323a4d77722facfa93ee114376f49b",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/h102_iio_demo/sweep.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/sweep.py",
+      "source_sha256": "a227918f3969e0efacc66e4b14375759f17368b3e1ed20c064085ad7d1dc7258",
+      "candidate_sha256": "443605e71b475d650d4f6bed3013d1a972698a21f0f63777f65a6f21a82ea962",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/h102_iio_demo/tx_cyclic.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "h102_iio_demo/tx_cyclic.py",
+      "source_sha256": "c2db6ed391c2c0df40ecdddbf936e70916b0a7bfeed1a85bed7616853304764d",
+      "candidate_sha256": "04897c96b4c5dacb7f7e0bb565f9c01b2f0f8d527228b7eb2e1b4da7e9c4b313",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/scripts/h102_iio_finite.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "scripts/h102_iio_finite.py",
+      "source_sha256": "58e5f6b32a49e4fa742642122977a59e0f61da6dd561f723abdc8bb60ca35164",
+      "candidate_sha256": "fa018b553ebff7ab5bf84d2ceed66f5aa43bb772a6b8d845d072806b98c07637",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/scripts/h102_iio_rx_continuous.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "scripts/h102_iio_rx_continuous.py",
+      "source_sha256": "242514c9c7f3cd5288edaeb603860b65337cba532e2869b00b34a6badd36fd59",
+      "candidate_sha256": "75e5470451efe1cf6fb91333c120d0ce61279e4f145cbbfa6cec889e3c0f7890",
+      "modification": "English source documentation and diagnostics"
+    },
+    {
+      "path": "control-runtime/scripts/run_h102_sdk1_iio_rx.py",
+      "source_repository": "logicrf/hawk-h102-iio-gui",
+      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_path": "scripts/run_h102_sdk1_iio_rx.py",
+      "source_sha256": "b55cdd341d3f8c48a7848e3f9a1df1b10a4d63694cf51bb1432d04738e5cdbb9",
+      "candidate_sha256": "99630fc6d51baf90f865194d00a49fc14aed40c774734ca92fa9f65c53558f58",
+      "modification": "English source documentation and diagnostics"
+    }
+  ]
+}

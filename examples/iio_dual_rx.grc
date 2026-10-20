@@ -1,0 +1,70 @@
+options:
+  parameters:
+    author: LogicRF Technologies
+    category: '[LogicRF]'
+    description: Managed Ethernet IIO RX - IP-only device control
+    generate_options: no_gui
+    id: iio_dual_rx_grc
+    output_language: python
+    run_options: run
+  states:
+    coordinate: [0, 0]
+    rotation: 0
+    state: enabled
+blocks:
+- name: h102_device_0
+  id: logicrf_h102_device
+  parameters:
+    backend: iio
+    uri: ip:DEVICE_IP
+    profile: 8msps-4mhz-common
+    sample_limit: '80000000'
+    sample_rate: '8000000'
+    center_frequency: '150000000'
+    mock_samples: '12345'
+  states:
+    coordinate: [32, 32]
+    rotation: 0
+    state: enabled
+- name: rx1
+  id: logicrf_h102_rx_source
+  parameters:
+    board: h102_device_0
+    channel: '1'
+  states:
+    coordinate: [32, 180]
+    rotation: 0
+    state: enabled
+- name: rx2
+  id: logicrf_h102_rx_source
+  parameters:
+    board: h102_device_0
+    channel: '2'
+  states:
+    coordinate: [32, 280]
+    rotation: 0
+    state: enabled
+- name: sink1
+  id: blocks_null_sink
+  parameters:
+    type: complex
+    vlen: '1'
+  states:
+    coordinate: [360, 180]
+    rotation: 0
+    state: enabled
+- name: sink2
+  id: blocks_null_sink
+  parameters:
+    type: complex
+    vlen: '1'
+  states:
+    coordinate: [360, 280]
+    rotation: 0
+    state: enabled
+connections:
+- [rx1, '0', sink1, '0']
+- [rx2, '0', sink2, '0']
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0

@@ -1,0 +1,21 @@
+id: logicrf_fm_audio_sink
+label: FM Audio Output (PulseAudio)
+category: '[LogicRF]'
+templates:
+  imports: from gnuradio import logicrf
+  make: logicrf.fm_audio_sink(${latency_ms})
+parameters:
+- id: latency_ms
+  label: Playback buffer (ms)
+  dtype: int
+  default: '1000'
+inputs:
+- domain: stream
+  dtype: float
+asserts:
+- ${100 <= latency_ms <= 2000}
+documentation: |-
+  Native C++ 48kHz mono float playback through PulseAudio/PipeWire-compatible server.
+  No H102 access during construction; requires a running user audio server.
+  Bounded prebuffer and explicit underflow/error counters. No ALSA fallback.
+file_format: 1

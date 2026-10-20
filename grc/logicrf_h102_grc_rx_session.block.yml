@@ -1,0 +1,33 @@
+id: logicrf_h102_grc_rx_session
+label: H102 Interactive RX Session
+category: '[LogicRF]'
+flags: [show_id, python]
+parameters:
+- {id: backend, label: Backend, dtype: string, default: iio, options: [iio, usb, mock]}
+- {id: host, label: Device IP, dtype: string, default: DEVICE_IP}
+- {id: channels, label: RX Channels, dtype: raw, default: '(1,)'}
+- {id: profile, label: Profile ID, dtype: string, default: 1p536msps-0p5mhz}
+- {id: sample_rate, label: Sample Rate (Hz), dtype: real, default: '1536000'}
+- {id: frequency, label: Center Frequency (Hz), dtype: real, default: '98100000'}
+- {id: gain_db, label: RX Gain (dB), dtype: real, default: '20'}
+- {id: fm, label: IIO FM Session (Single RX), dtype: bool, default: 'False'}
+- {id: samples, label: Finite Samples Per RX (IIO/Mock; 0 continuous), dtype: int, default: '0'}
+value: ${None}
+asserts:
+- ${tuple(channels) in ((1,), (2,), (1,2))}
+- ${backend != 'iio' or sample_rate * 4 * len(channels) <= 64000000}
+- ${backend != 'usb' or sample_rate * 4 * len(channels) <= 320000000}
+- ${not fm or sample_rate == 1536000 and len(channels) == 1 and 88000000 <= frequency <= 108000000}
+- ${backend != 'usb' or samples == 0}
+templates:
+  imports: from gnuradio.logicrf.grc_session import make_grc_rx_device
+  var_make: |-
+    self.${id} = ${id} = make_grc_rx_device(backend=${backend}, host=${host}, channels=${channels}, profile=${profile}, sample_rate=${sample_rate}, frequency=${frequency}, gain_db=${gain_db}, fm=${fm}, samples=${samples})
+documentation: |-
+  RX only, no RF TX. Constructor never connects. Every declared channel must be connected.
+  Use H102 RX Panel and Options/Run=Off. IQ DSP connections remain visible in GRC.
+  IIO single/dual RX pause retains owner; Release confirms independent restore and archive.
+  Requires the matched API36 addon and cap3 bitstream. Raw Source/Observer counts must match at EOS.
+  USB supports same-owner hot pause/resume/tune; Release waits for independent final post.
+  Profile/sample-rate/channels are graph construction parameters, not live DSP changes.
+file_format: 1

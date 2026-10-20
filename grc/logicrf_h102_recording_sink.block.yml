@@ -1,0 +1,15 @@
+id: logicrf_h102_recording_sink
+label: H102 Recording Sink
+category: '[LogicRF]'
+flags: [python]
+parameters:
+- {id: plan, label: Recording Plan, dtype: raw, default: recording}
+- {id: channel, label: RX Channel, dtype: int, default: '1'}
+inputs:
+- {domain: stream, dtype: complex}
+templates:
+  make: ${plan}.sink(${channel})
+documentation: |-
+  Native GNU FileSink and H1MI Metadata Sink. IQ is never copied through Python.
+  Source must match the channel; count and independent session checks gate manifest publication.
+file_format: 1

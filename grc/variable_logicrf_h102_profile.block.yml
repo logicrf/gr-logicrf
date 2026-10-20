@@ -1,0 +1,258 @@
+id: variable_logicrf_h102_profile
+label: H102 Profile / Fs / BW
+category: '[LogicRF]'
+flags:
+- show_id
+- python
+parameters:
+- id: preset
+  label: Configuration
+  dtype: enum
+  default: 4msps-2mhz-common
+  options:
+  - 0p192msps-0p05mhz
+  - 0p192msps-0p05mhz-common
+  - 0p192msps-0p1mhz
+  - 0p192msps-0p1mhz-common
+  - 0p768msps-0p2mhz
+  - 0p768msps-0p2mhz-common
+  - 10msps-5mhz
+  - 10msps-5mhz-common
+  - 16msps-2mhz
+  - 16msps-2mhz-common
+  - 16msps-4mhz
+  - 16msps-4mhz-common
+  - 16msps-8mhz
+  - 16msps-8mhz-common
+  - 1p536msps-0p5mhz
+  - 1p536msps-0p5mhz-common
+  - 1p536msps-1mhz
+  - 1p536msps-1mhz-common
+  - 20msps-10mhz
+  - 20msps-10mhz-common
+  - 20msps-5mhz
+  - 20msps-5mhz-common
+  - 23p04msps-15mhz
+  - 23p04msps-15mhz-common
+  - 2msps-0p25mhz
+  - 2msps-0p25mhz-common
+  - 2msps-0p5mhz
+  - 2msps-0p5mhz-common
+  - 2msps-1mhz
+  - 2msps-1mhz-common
+  - 30p72msps-15p36mhz
+  - 30p72msps-15p36mhz-common
+  - 30p72msps-20mhz
+  - 30p72msps-20mhz-common
+  - 40msps-10mhz
+  - 40msps-10mhz-common
+  - 40msps-20mhz
+  - 40msps-20mhz-common
+  - 40msps-30mhz
+  - 40msps-30mhz-common
+  - 4msps-0p5mhz
+  - 4msps-0p5mhz-common
+  - 4msps-1mhz
+  - 4msps-1mhz-common
+  - 4msps-2mhz
+  - 4msps-2mhz-common
+  - 61p44msps-20mhz
+  - 61p44msps-20mhz-common
+  - 61p44msps-30mhz
+  - 61p44msps-30mhz-common
+  - 61p44msps-40mhz
+  - 61p44msps-40mhz-common
+  - 8msps-1mhz
+  - 8msps-1mhz-common
+  - 8msps-2mhz
+  - 8msps-2mhz-common
+  - 8msps-4mhz
+  - 8msps-4mhz-common
+  option_labels:
+  - 0.192 MSPS / 0.05 MHz — 0p192msps-0p05mhz
+  - 0.192 MSPS / 0.05 MHz — 0p192msps-0p05mhz-common
+  - 0.192 MSPS / 0.1 MHz — 0p192msps-0p1mhz
+  - 0.192 MSPS / 0.1 MHz — 0p192msps-0p1mhz-common
+  - 0.768 MSPS / 0.2 MHz — 0p768msps-0p2mhz
+  - 0.768 MSPS / 0.2 MHz — 0p768msps-0p2mhz-common
+  - 10 MSPS / 5 MHz — 10msps-5mhz
+  - 10 MSPS / 5 MHz — 10msps-5mhz-common
+  - 16 MSPS / 2 MHz — 16msps-2mhz
+  - 16 MSPS / 2 MHz — 16msps-2mhz-common
+  - 16 MSPS / 4 MHz — 16msps-4mhz
+  - 16 MSPS / 4 MHz — 16msps-4mhz-common
+  - 16 MSPS / 8 MHz — 16msps-8mhz
+  - 16 MSPS / 8 MHz — 16msps-8mhz-common
+  - 1.536 MSPS / 0.5 MHz — 1p536msps-0p5mhz
+  - 1.536 MSPS / 0.5 MHz — 1p536msps-0p5mhz-common
+  - 1.536 MSPS / 1 MHz — 1p536msps-1mhz
+  - 1.536 MSPS / 1 MHz — 1p536msps-1mhz-common
+  - 20 MSPS / 10 MHz — 20msps-10mhz
+  - 20 MSPS / 10 MHz — 20msps-10mhz-common
+  - 20 MSPS / 5 MHz — 20msps-5mhz
+  - 20 MSPS / 5 MHz — 20msps-5mhz-common
+  - 23.04 MSPS / 15 MHz — 23p04msps-15mhz
+  - 23.04 MSPS / 15 MHz — 23p04msps-15mhz-common
+  - 2 MSPS / 0.25 MHz — 2msps-0p25mhz
+  - 2 MSPS / 0.25 MHz — 2msps-0p25mhz-common
+  - 2 MSPS / 0.5 MHz — 2msps-0p5mhz
+  - 2 MSPS / 0.5 MHz — 2msps-0p5mhz-common
+  - 2 MSPS / 1 MHz — 2msps-1mhz
+  - 2 MSPS / 1 MHz — 2msps-1mhz-common
+  - 30.72 MSPS / 15.36 MHz — 30p72msps-15p36mhz
+  - 30.72 MSPS / 15.36 MHz — 30p72msps-15p36mhz-common
+  - 30.72 MSPS / 20 MHz — 30p72msps-20mhz
+  - 30.72 MSPS / 20 MHz — 30p72msps-20mhz-common
+  - 40 MSPS / 10 MHz — 40msps-10mhz
+  - 40 MSPS / 10 MHz — 40msps-10mhz-common
+  - 40 MSPS / 20 MHz — 40msps-20mhz
+  - 40 MSPS / 20 MHz — 40msps-20mhz-common
+  - 40 MSPS / 30 MHz — 40msps-30mhz
+  - 40 MSPS / 30 MHz — 40msps-30mhz-common
+  - 4 MSPS / 0.5 MHz — 4msps-0p5mhz
+  - 4 MSPS / 0.5 MHz — 4msps-0p5mhz-common
+  - 4 MSPS / 1 MHz — 4msps-1mhz
+  - 4 MSPS / 1 MHz — 4msps-1mhz-common
+  - 4 MSPS / 2 MHz — 4msps-2mhz
+  - 4 MSPS / 2 MHz — 4msps-2mhz-common
+  - 61.44 MSPS / 20 MHz — 61p44msps-20mhz
+  - 61.44 MSPS / 20 MHz — 61p44msps-20mhz-common
+  - 61.44 MSPS / 30 MHz — 61p44msps-30mhz
+  - 61.44 MSPS / 30 MHz — 61p44msps-30mhz-common
+  - 61.44 MSPS / 40 MHz — 61p44msps-40mhz
+  - 61.44 MSPS / 40 MHz — 61p44msps-40mhz-common
+  - 8 MSPS / 1 MHz — 8msps-1mhz
+  - 8 MSPS / 1 MHz — 8msps-1mhz-common
+  - 8 MSPS / 2 MHz — 8msps-2mhz
+  - 8 MSPS / 2 MHz — 8msps-2mhz-common
+  - 8 MSPS / 4 MHz — 8msps-4mhz
+  - 8 MSPS / 4 MHz — 8msps-4mhz-common
+  option_attributes:
+    fs:
+    - '192000'
+    - '192000'
+    - '192000'
+    - '192000'
+    - '768000'
+    - '768000'
+    - '10000000'
+    - '10000000'
+    - '16000000'
+    - '16000000'
+    - '16000000'
+    - '16000000'
+    - '16000000'
+    - '16000000'
+    - '1536000'
+    - '1536000'
+    - '1536000'
+    - '1536000'
+    - '20000000'
+    - '20000000'
+    - '20000000'
+    - '20000000'
+    - '23040000'
+    - '23040000'
+    - '2000000'
+    - '2000000'
+    - '2000000'
+    - '2000000'
+    - '2000000'
+    - '2000000'
+    - '30720000'
+    - '30720000'
+    - '30720000'
+    - '30720000'
+    - '40000000'
+    - '40000000'
+    - '40000000'
+    - '40000000'
+    - '40000000'
+    - '40000000'
+    - '4000000'
+    - '4000000'
+    - '4000000'
+    - '4000000'
+    - '4000000'
+    - '4000000'
+    - '61440000'
+    - '61440000'
+    - '61440000'
+    - '61440000'
+    - '61440000'
+    - '61440000'
+    - '8000000'
+    - '8000000'
+    - '8000000'
+    - '8000000'
+    - '8000000'
+    - '8000000'
+    bw:
+    - '50000'
+    - '50000'
+    - '100000'
+    - '100000'
+    - '200000'
+    - '200000'
+    - '5000000'
+    - '5000000'
+    - '2000000'
+    - '2000000'
+    - '4000000'
+    - '4000000'
+    - '8000000'
+    - '8000000'
+    - '500000'
+    - '500000'
+    - '1000000'
+    - '1000000'
+    - '10000000'
+    - '10000000'
+    - '5000000'
+    - '5000000'
+    - '15000000'
+    - '15000000'
+    - '250000'
+    - '250000'
+    - '500000'
+    - '500000'
+    - '1000000'
+    - '1000000'
+    - '15360000'
+    - '15360000'
+    - '20000000'
+    - '20000000'
+    - '10000000'
+    - '10000000'
+    - '20000000'
+    - '20000000'
+    - '30000000'
+    - '30000000'
+    - '500000'
+    - '500000'
+    - '1000000'
+    - '1000000'
+    - '2000000'
+    - '2000000'
+    - '20000000'
+    - '20000000'
+    - '30000000'
+    - '30000000'
+    - '40000000'
+    - '40000000'
+    - '1000000'
+    - '1000000'
+    - '2000000'
+    - '2000000'
+    - '4000000'
+    - '4000000'
+value: '${ {''profile'': str(preset), ''rate_hz'': int(preset.fs), ''bandwidth_hz'':
+  int(preset.bw)} }'
+templates:
+  var_make: 'self.${id} = ${id} = {''profile'': ''${preset}'', ''rate_hz'': ${preset.fs},
+    ''bandwidth_hz'': ${preset.bw}}'
+documentation: 'Offline preset catalog: 58 exact packages for 29 logical Fs/BW combinations.
+  Selecting once updates session and DSP rates. Edit before Generate/Run; no device
+  I/O or live profile change. IIO admission still rejects unsupported aggregate rates;
+  no silent downsampling.'
+file_format: 1

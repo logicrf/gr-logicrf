@@ -1,0 +1,72 @@
+options:
+  parameters:
+    author: LogicRF Technologies
+    category: '[LogicRF]'
+    description: P3a finite mock TX only, no hardware or RF
+    generate_options: no_gui
+    id: mock_dual_tx_grc
+    output_language: python
+    run_options: run
+  states:
+    coordinate: [0, 0]
+    rotation: 0
+    state: enabled
+blocks:
+- name: h102_device_0
+  id: logicrf_h102_device
+  parameters:
+    backend: mock
+    direction: tx
+    tx_samples: '12345'
+    sample_rate: '192000'
+    center_frequency: '150000000'
+  states:
+    coordinate: [32, 32]
+    rotation: 0
+    state: enabled
+- name: source1
+  id: blocks_vector_source_x
+  parameters:
+    type: complex
+    vector: '(0.25-0.5j,)'
+    repeat: 'True'
+    vlen: '1'
+  states:
+    coordinate: [32, 180]
+    rotation: 0
+    state: enabled
+- name: source2
+  id: blocks_vector_source_x
+  parameters:
+    type: complex
+    vector: '(-0.125+0.375j,)'
+    repeat: 'True'
+    vlen: '1'
+  states:
+    coordinate: [32, 280]
+    rotation: 0
+    state: enabled
+- name: sink1
+  id: logicrf_h102_tx_sink
+  parameters:
+    board: h102_device_0
+    channel: '1'
+  states:
+    coordinate: [360, 180]
+    rotation: 0
+    state: enabled
+- name: sink2
+  id: logicrf_h102_tx_sink
+  parameters:
+    board: h102_device_0
+    channel: '2'
+  states:
+    coordinate: [360, 280]
+    rotation: 0
+    state: enabled
+connections:
+- [source1, '0', sink1, '0']
+- [source2, '0', sink2, '0']
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0

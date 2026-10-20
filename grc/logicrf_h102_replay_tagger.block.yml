@@ -1,0 +1,17 @@
+id: logicrf_h102_replay_tagger
+label: H102 Replay H1MI Tagger
+category: '[LogicRF]'
+flags: [python]
+parameters:
+- {id: plan, label: Replay Plan, dtype: raw, default: recording}
+- {id: channel, label: RX Channel, dtype: int, default: '1'}
+inputs:
+- {domain: stream, dtype: complex}
+outputs:
+- {domain: stream, dtype: complex}
+templates:
+  make: ${plan}.tagger(${channel})
+documentation: |-
+  Native bounded H1MI reader. Keep before display decimation/processing.
+  Original integer time/frame/config tags are reconstructed at exact sample offsets.
+file_format: 1

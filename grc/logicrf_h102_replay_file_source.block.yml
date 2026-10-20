@@ -1,0 +1,12 @@
+id: logicrf_h102_replay_file_source
+label: H102 Replay File Source
+category: '[LogicRF]'
+flags: [python]
+parameters:
+- {id: plan, label: Replay Plan, dtype: raw, default: recording}
+- {id: channel, label: RX Channel, dtype: int, default: '1'}
+outputs:
+- {domain: stream, dtype: complex}
+templates:
+  make: ${plan}.source(${channel})
+file_format: 1
