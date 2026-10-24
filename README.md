@@ -48,6 +48,8 @@ Select the device IP, connection type, profile and channels, then generate and r
 
 ## Documentation and licensing
 
+For USB setup, use the separate [USB host deployment tools](docs/USB-HOST-PORTABLE.md). They build and install the matching host helpers and local service for a selected user; vendor inputs remain separate. The module's ordinary source installer does not perform this administrator setup.
+
 - [Installation and matching versions](docs/INSTALL.md)
 - [Operation, profiles and integrity](docs/USAGE.md)
 - [APIs and programming examples](docs/API.md)

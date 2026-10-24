@@ -13,5 +13,11 @@
   "github_visibility": "private",
   "translation_origin_commit": "2d067c38194956768a18914de55240063df9e02e",
   "installed_helper_requirements": "python/h102_control/installed-helpers.json",
-  "distribution_change": "English user documentation, source comments and messages; installed helper identity adaptation; device firmware unchanged"
+  "distribution_change": "English user documentation, source comments and messages; installed helper identity adaptation; device firmware unchanged",
+  "usb_host_tools": {
+    "version": "1.0.0-r1",
+    "source_map": "docs/usb-host-tools-source-map.json",
+    "development_revision": "00cd327499cb1a61b5813b0078879d89d9f03979",
+    "scope": "Separate host deployment tooling; no new firmware or broad hardware qualification"
+  }
 }

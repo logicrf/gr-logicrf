@@ -57,6 +57,8 @@ Service versions and source locks must match. Do not edit locks to bypass an err
 
 ## USB
 
+Follow [Install the USB host backend](USB-HOST-PORTABLE.md) for the separate parameterized deployment tools. Its helper build does not require GNU Radio. Install matching board services and the GNU Radio module separately; routine operation uses the device IP after administrator setup.
+
 The module includes USB protocol source, but the source installation command does not build or distribute FTDI D3XX helpers. USB applications also need an approved matching USB host service, an FT601 connection and network control of the device. Review vendor libraries, headers and combined redistribution terms separately; the GPL grant here does not license vendor material. See [third-party notices](../THIRD-PARTY-NOTICES.md).
 
 ## Update and removal
