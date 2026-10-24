@@ -10,6 +10,8 @@ These tools retain the existing receive/transmit implementation. They do not ins
 
 Obtain the following matching D3XX 1.1.8 inputs separately. Neither this source package nor a prepared LogicRF payload includes these vendor files. The tools do not download them or accept vendor agreements on your behalf.
 
+Choose **Linux x64 1.1.8** on the [official FTDI D3XX driver page](https://ftdichip.com/drivers/d3xx-drivers/) and extract the shared library, `ftd3xx.h` and `Types.h`. Obtain the fourth file, `libusb.h`, from [the official libusb v1.0.27 source](https://raw.githubusercontent.com/libusb/libusb/v1.0.27/libusb/libusb.h) and save it in the same input directory. Verify all four hashes below; a different system header is not a substitute.
+
 | File | SHA-256 |
 | --- | --- |
 | `libftd3xx.so.1.1.8` | `949445eb019a6fe3e314e54cc45af1b8ddb1fcdf0c377f1144a59143d0a08752` |

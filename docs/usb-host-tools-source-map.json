@@ -1,33 +1,33 @@
 {
   "version": "1.0.0-r1",
-  "development_revision": "00cd327499cb1a61b5813b0078879d89d9f03979",
+  "development_revision": "7ee35db0863f2042ec681c1c12e1cf04236bfd71",
   "files": [
     {
       "file": "scripts/install_usb_host_portable.py",
-      "source_revision": "00cd327499cb1a61b5813b0078879d89d9f03979",
+      "source_revision": "7ee35db0863f2042ec681c1c12e1cf04236bfd71",
       "source_sha256": "84fbad218707ba7984cdf11a2c8ea31997162e9f620fcc7c1c25d1caecd3b004",
       "delivery_sha256": "94b1c17e19e5435cd7a24881e1a1af6a5e5825c7f6a95a50f15f0e31530b310e",
       "change": "English documentation and docstrings only; executable AST unchanged"
     },
     {
       "file": "tests/qa_usb_host_portable.py",
-      "source_revision": "00cd327499cb1a61b5813b0078879d89d9f03979",
+      "source_revision": "7ee35db0863f2042ec681c1c12e1cf04236bfd71",
       "source_sha256": "77c26a0d37ba49fdc48ea4b1017cb1c7469d23d80ac1621d5975a427155272e6",
       "delivery_sha256": "14413110267d2f942985551608c0387a330dfe29f3bd418e75097de71743f194",
       "change": "English documentation and docstrings only; executable AST unchanged"
     },
     {
       "file": "tools/usb-host/CMakeLists.txt",
-      "source_revision": "00cd327499cb1a61b5813b0078879d89d9f03979",
+      "source_revision": "7ee35db0863f2042ec681c1c12e1cf04236bfd71",
       "source_sha256": "0df40e6e82307d7012946b7549ad10a19371777c1b34643c2f65517069394c12",
       "delivery_sha256": "0df40e6e82307d7012946b7549ad10a19371777c1b34643c2f65517069394c12",
       "change": "unchanged"
     },
     {
       "file": "docs/USB-HOST-PORTABLE.md",
-      "source_revision": "00cd327499cb1a61b5813b0078879d89d9f03979",
-      "source_sha256": "559670a9ee2bd6a5fe5f48e07540a36ceb8676dfc288f037e45a0b65944c9d3c",
-      "delivery_sha256": "834f4a0304a05464b7edd9ee6c3b16a3e69f16da7b09fd87d5006f2db149a447",
+      "source_revision": "7ee35db0863f2042ec681c1c12e1cf04236bfd71",
+      "source_sha256": "63be93b0281a19ca9fb62899b68032d8d7367bbc38fb638fc74f1b05636ec3ce",
+      "delivery_sha256": "495489d73bb958ce17401fc9a558f110a0ce71efe9d6044607fda881d702bdef",
       "change": "Task-oriented English user guide"
     }
   ],
