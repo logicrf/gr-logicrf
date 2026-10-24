@@ -1,6 +1,6 @@
 # Install the USB host backend
 
-USB host tools **1.0.0-r1** install the FT601 receive/transmit helpers and local control service for one ordinary login user. The supported reference host is **Ubuntu 22.04 x86_64 with Python 3.10**. Configure the username, project directory and external D3XX location for that computer. Routine GNU Radio connections require only the H102 IP; administrator authentication is used during installation and maintenance.
+USB host tools **1.0.0-r2** install the FT601 receive/transmit helpers and local control service for one ordinary login user. The supported reference host is **Ubuntu 22.04 x86_64 with Python 3.10**. Configure the username, project directory and external D3XX location for that computer. Routine GNU Radio connections require only the H102 IP; administrator authentication is used during installation and maintenance.
 
 Connect USB to the computer running the flowgraph. Device control still uses Ethernet and matching H102 API36/capability-3 services. The standalone IIO GUI uses Ethernet IQ. The existing USB service accepts one FT601 at a time and rejects ambiguous device identification.
 
@@ -32,8 +32,8 @@ Run from the extracted source root. Set the paths for your host. Use new build a
 ```bash
 PROJECT="$HOME/LogicRF/hawk-h102"
 D3XX="$HOME/LogicRF/vendor/ftd3xx/1.1.8"
-BUILD="$PROJECT/build/usb-host/1.0.0-r1"
-BUNDLE="$PROJECT/releases/usb-host-1.0.0-r1"
+BUILD="$PROJECT/build/usb-host/1.0.0-r2"
+BUNDLE="$PROJECT/releases/usb-host-1.0.0-r2"
 mkdir -p "$PROJECT/build/usb-host" "$PROJECT/releases" "$PROJECT/envs/gr-usb"
 chmod 700 "$PROJECT/envs/gr-usb"
 cmake -S tools/usb-host -B "$BUILD" -G Ninja \
@@ -52,7 +52,7 @@ Review the source and prepared manifest first. Replace the approval placeholder 
 
 ```bash
 LOGIN_USER="$(id -un)"
-INSTALL="/opt/logicrf/hawk-h102/usb-host/1.0.0-r1"
+INSTALL="/opt/logicrf/hawk-h102/usb-host/1.0.0-r2"
 APPROVED_MANIFEST_SHA=REPLACE_WITH_THE_VERIFIED_MANIFEST_SHA256
 sudo python3 -B scripts/install_usb_host_portable.py install \
   --bundle "$BUNDLE" --manifest-sha256 "$APPROVED_MANIFEST_SHA" \

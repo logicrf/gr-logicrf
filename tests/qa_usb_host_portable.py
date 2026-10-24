@@ -152,6 +152,19 @@ class PortableInputs(unittest.TestCase):
         with self.assertRaisesRegex(PermissionError, 'PRIVATE_ORIGINAL_LOCK'):
             HOST.lock_info(path, os.getuid())
 
+    def test_reused_default_lock_not_reported_as_new(self):
+        """Preserve the original inode and report reuse rather than creation on a second selection."""
+        with patch.object(HOST, 'DEFAULT_LOCK_DIRECTORY', self.root), \
+                patch.object(HOST, 'LEGACY_LOCK', self.root/'missing-legacy.lock'), \
+                patch.object(HOST, 'root_parents'), \
+                patch.object(HOST, 'root_path', side_effect=lambda path, **kwargs: path):
+            lock, created = HOST.choose_lock(None, 'FIRST', None)
+            self.assertTrue(created)
+            inode = lock.stat().st_ino
+            same, created = HOST.choose_lock(None, 'FIRST', None)
+            self.assertFalse(created)
+            self.assertEqual(same.stat().st_ino, inode)
+
     def test_failed_service_start_restores_original_unit(self):
         """Restore the exact previous unit after a simulated service startup failure."""
         root = self.root / 'installation'

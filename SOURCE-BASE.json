@@ -15,9 +15,9 @@
   "installed_helper_requirements": "python/h102_control/installed-helpers.json",
   "distribution_change": "English user documentation, source comments and messages; installed helper identity adaptation; device firmware unchanged",
   "usb_host_tools": {
-    "version": "1.0.0-r1",
+    "version": "1.0.0-r2",
     "source_map": "docs/usb-host-tools-source-map.json",
-    "development_revision": "7ee35db0863f2042ec681c1c12e1cf04236bfd71",
+    "development_revision": "847f099713e9bc85eb10630ef7142f8c519d33db",
     "scope": "Separate host deployment tooling; no new firmware or broad hardware qualification"
   }
 }

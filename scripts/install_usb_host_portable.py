@@ -28,10 +28,11 @@ import stat
 import subprocess
 import time
 
-VERSION = '1.0.0-r1'
+VERSION = '1.0.0-r2'
 LIBRARY_SHA = '949445eb019a6fe3e314e54cc45af1b8ddb1fcdf0c377f1144a59143d0a08752'
 UNIT = Path('/etc/systemd/system/logicrf-h102-usb-api.service')
 LEGACY_LOCK = Path('/data/logicrf/h102-usb-acceptance/locks/ft601-000000000001.lock')
+DEFAULT_LOCK_DIRECTORY = Path('/var/lib/logicrf/hawk-h102/usb-locks')
 SOURCE = Path(__file__).resolve().parents[1]
 MAX_FILE = 8 * 1024 * 1024
 PAYLOAD = {
@@ -236,13 +237,14 @@ def choose_lock(explicit, serial, previous):
         return plain(explicit), False
     if explicit:
         return root_path(explicit, private=True), False
-    lock = Path('/var/lib/logicrf/hawk-h102/usb-locks') / ('ft601-' + serial + '.lock')
+    lock = DEFAULT_LOCK_DIRECTORY / ('ft601-' + serial + '.lock')
     root_parents(lock.parent)
-    if not lock.exists():
+    created = not lock.exists()
+    if created:
         fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_RDWR | os.O_NOFOLLOW, 0o600)
         os.close(fd)
     root_path(lock, private=True)
-    return lock, True
+    return lock, created
 
 
 def lock_info(path, uid):
