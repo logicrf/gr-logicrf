@@ -9,7 +9,7 @@
 @architect LogicRF
 @email info@logicrf.com
 @website https://www.logicrf.com
-@version 1.2.2rc2
+@version 1.2.2
 @date 2026-10-20
 """
 import argparse
@@ -36,12 +36,12 @@ def main():
     if any((prefix/name).exists() for name in ('installation.json','launch.py')):
         raise FileExistsError('INSTALLATION_ALREADY_REGISTERED')
     project.mkdir(parents=True,exist_ok=True)
-    identifier='1.2.2rc2-'+hashlib.sha256(str(prefix).encode()).hexdigest()[:12]
+    identifier='1.2.2-'+hashlib.sha256(str(prefix).encode()).hexdigest()[:12]
     desktop=args.desktop_dir.resolve()/('logicrf-gnuradio-'+identifier+'.desktop') if args.desktop_dir else None
     if desktop and desktop.exists():raise FileExistsError('DESKTOP_ENTRY_ALREADY_EXISTS')
     installation=dict(schema=1,module_prefix=str(prefix),gnuradio_prefix=str(gnu),
-        project_root=str(project),installation_id=identifier,version='1.2.2rc2',
-        qualification='PUBLIC_SOURCE_CANDIDATE_OFFLINE_VERIFIED')
+        project_root=str(project),installation_id=identifier,version='1.2.2',
+        qualification='SOURCE_INSTALL_OFFLINE_VERIFIED')
     env=environment(installation)
     version=subprocess.check_output([str(gnu/'bin/gnuradio-config-info'),'--version'],env=env,text=True).strip()
     if version!='3.10.12.0':raise RuntimeError('REQUIRES_GNU_RADIO_3_10_12_0')

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.2.2rc2",
+  "version": "1.2.2",
   "module_base_commit": "002451b3c0a2ba470f6cc13d5b93cd6ca7b59cd9",
   "control_base_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
   "control_source_map": "control-runtime/SOURCE-MAP.json",
@@ -19,5 +19,11 @@
     "source_map": "docs/usb-host-tools-source-map.json",
     "development_revision": "847f099713e9bc85eb10630ef7142f8c519d33db",
     "scope": "Separate host deployment tooling; no new firmware or broad hardware qualification"
+  },
+  "stable_source_packaging": {
+    "previous_source_release_commit": "304400e0e38f5d888cfa207147d598176e0123a8",
+    "delivery_parent_commit": "6a2c417a9a80d79467790c9c49f4cb8acef4ef5a",
+    "changes": "Version and source-installation registration metadata; no native IQ or device-helper changes",
+    "hardware_qualification": "Existing exact-version evidence only; no new RF, profile-matrix, temperature or multi-board qualification"
   }
 }

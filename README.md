@@ -2,7 +2,7 @@
 
 Open a `.grc` flowgraph in GNU Radio Companion, enter the H102 IP address, and receive or transmit IQ over Gigabit Ethernet IIO or a separately deployed USB 3.0 backend. C++ handles the IQ data path; Python handles configuration, bindings and session management. The interface uses GNU Radio Qt GUI.
 
-**Version: 1.2.2rc2 (pre-release).** This package provides the GNU Radio module, examples, control runtime and source installer. It uses the 1.2.1 data path and works with the matching H102 services described below. It does not install or replace board firmware.
+**Version: 1.2.2 (source release).** This package provides the GNU Radio module, examples, control runtime and source installer. It uses the 1.2.1 data path and works with the matching H102 services described below. It does not install or replace board firmware.
 
 ## Features
 
@@ -27,10 +27,10 @@ Prepare dependencies and matching H102 services using the [installation guide](d
 ```bash
 bash scripts/install_from_source.sh \
   /path/to/gnuradio-3.10.12.0-prefix \
-  "$HOME/LogicRF/hawk-h102/install/gr-logicrf/1.2.2rc2" \
+  "$HOME/LogicRF/hawk-h102/install/gr-logicrf/1.2.2" \
   "$HOME/LogicRF/hawk-h102"
 
-python3 "$HOME/LogicRF/hawk-h102/install/gr-logicrf/1.2.2rc2/launch.py" grc
+python3 "$HOME/LogicRF/hawk-h102/install/gr-logicrf/1.2.2/launch.py" grc
 ```
 
 The installer builds, runs offline tests, installs and verifies the bundled control source. Installation does not connect to a device or require a private Git repository. Install GNU Radio and system dependencies first. This source installation does not deploy the USB vendor library or USB host service.

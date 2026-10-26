@@ -10,7 +10,7 @@
 @architect LogicRF
 @email info@logicrf.com
 @website https://www.logicrf.com
-@version 1.2.2rc2
+@version 1.2.2
 @date 2026-10-20
 """
 import json
