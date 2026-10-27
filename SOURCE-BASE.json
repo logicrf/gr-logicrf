@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "1.2.3rc3",
+  "version": "1.2.3",
   "module_base_commit": "f5342026acc6b35e1536ba1913505244f8adc0cb",
   "control_base_commit": "21a32e10bb4521791ecee4f3c4a627a2dd203d16",
   "control_source_map": "control-runtime/SOURCE-MAP.json",
   "publication_scope": "GPL module source and minimal LogicRF control runtime; no vendor SDK, RTL, image, IQ or internal Git history",
-  "qualification": "OFFLINE_CANDIDATE; EXACT_NEW_IMAGE_PHYSICAL_SD_BOOT_PENDING",
+  "qualification": "PASS_SCOPED_FIRST_UNIT_EXACT_IMAGE_AND_REPRESENTATIVE_IIO_USB",
   "delivery_language": "English",
   "development_language": "Chinese",
   "gitea_delivery_branch": "github-en",
@@ -23,14 +23,16 @@
   "stable_source_packaging": {
     "previous_source_release_commit": "304400e0e38f5d888cfa207147d598176e0123a8",
     "delivery_parent_commit": "6a2c417a9a80d79467790c9c49f4cb8acef4ef5a",
-    "changes": "Version and source-installation registration metadata; no native IQ or device-helper changes",
+    "changes": "Stable version and source-installation metadata; C++ IQ sources unchanged from accepted 1.2.3rc3",
     "hardware_qualification": "Existing exact-version evidence only; no new RF, profile-matrix, temperature or multi-board qualification"
   },
   "panel_system_update": {
     "firmware": "1.2.1-rc2",
     "raw_sha256": "ce03f2d9cc496842548996bb18e14e5c2e4bfea10842dbc701bf7fb9833eec92",
     "scope": "Panel compatibility, exact firmware/SDK requirements and translated runtime identity; no native IQ algorithm changes",
-    "paired_development_commit": "cb06f8d87c19cf0e101075785aae0a2ccbc1ea4b"
+    "paired_development_commit": "94667418333209cc02b9a33e299a8b54c19e9a67",
+    "distribution_firmware": "1.2.1",
+    "acceptance_scope": "Exact first-unit SD cold/warm boot and restoration; dual IIO RX and digital USB dual TX; no new full-profile/RF/UTC/second-unit qualification"
   },
   "registration_update": "Registration verifies the imported module version against source metadata before writing a receipt"
 }

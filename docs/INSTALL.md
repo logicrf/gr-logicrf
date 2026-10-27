@@ -1,6 +1,6 @@
-## Firmware required by this candidate
+# Required firmware
 
-This 1.2.3rc2 candidate requires the exact Kuiper 1.2.1-rc1 full-image metadata, SDK and API helpers recorded by its lock files. The image already includes IP-only control. The earlier panel1 incremental installation uses its separate 1.2.3rc1 host package. Keep these combinations distinct; do not edit a lock to force compatibility. Exact-card cold-boot acceptance of 1.2.1-rc1 is pending.
+Use gr-logicrf 1.2.3 with the integrated Kuiper 1.2.1 image (internal build 1.2.1-rc2). Matching API, SDK and firmware locks are included; do not modify them to bypass a mismatch. No older board-service add-on is needed on this image. See [system compatibility](PANEL-COMPATIBILITY.md).
 
 # Installation and matching versions
 

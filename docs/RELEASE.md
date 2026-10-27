@@ -1,3 +1,13 @@
+# 1.2.3 source release
+
+The stable version is paired with Kuiper 1.2.1 and promotes the accepted 1.2.3rc3 C++ data path unchanged. Updated metadata verifies the imported module version during installation. The integrated SD image includes matching panel status, IP-only API and network affinity; no older board-service add-on is required. USB host tools keep their separate 1.0.0-r2 version.
+
+The current first H102 passed exact-card cold/warm boot, identity persistence, full image-asset checks, representative IIO dual RX recording and USB digital dual TX with recovery. All default settings were restored and RF remained off. See [matching system and precise scope](PANEL-COMPATIBILITY.md). Source/package checks and earlier endurance results retain their original scope; no new full-profile, RF, absolute UTC or second-unit qualification is claimed.
+
+The LogicRF module remains GPL-3.0-or-later with its notices and minimal bundled control sources. This grant does not relicense the separate GUI, device firmware, RTL or vendor inputs. Ordinary source installation does not install vendor USB libraries or administrator host services.
+
+<details><summary>Previous 1.2.2 source-release record</summary>
+
 # 1.2.2 source release
 
 ## Changes
@@ -27,3 +37,5 @@ The original profile, RF settings, identity and idle state were independently re
 ## Delivery branches
 
 Gitea `main` is the Chinese development branch. Gitea `github-en` contains the reviewed English delivery snapshot; GitHub `main` mirrors the same commits. Delivery commits, Markdown, source explanations and user-facing text use English. Upstream third-party names, notices and API identifiers retain their original meaning. GitHub stays private until the user approves publication. A delivery manifest records the corresponding development source revisions; development history is not merged into the delivery branch.
+
+</details>

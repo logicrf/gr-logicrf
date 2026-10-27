@@ -1,12 +1,8 @@
-## Panel system release candidate
-
-gr-logicrf 1.2.3rc2 is paired with Kuiper 1.2.1-rc1. See [firmware compatibility](docs/PANEL-COMPATIBILITY.md). The exact new SD image has not yet completed physical cold-boot acceptance.
-
 # gr-logicrf · GNU Radio for the LogicRF Hawk H102
 
 Open a `.grc` flowgraph in GNU Radio Companion, enter the H102 IP address, and receive or transmit IQ over Gigabit Ethernet IIO or a separately deployed USB 3.0 backend. C++ handles the IQ data path; Python handles configuration, bindings and session management. The interface uses GNU Radio Qt GUI.
 
-**Version: 1.2.3rc2 (release candidate).** This package provides the GNU Radio module, examples, control runtime and source installer for the complete Kuiper 1.2.1-rc1 image. The native IQ algorithms are unchanged. Physical cold-boot acceptance of the exact image is pending. This host package does not install or replace board firmware.
+**Version: 1.2.3.** Use the integrated Kuiper 1.2.1 image (internal build 1.2.1-rc2). Panel/API/SDK identities are checked before acquisition. The exact image passed first-unit cold/warm boot and representative IIO/USB checks. This stable label does not change the accepted rc3 C++ data path or install board firmware. See [compatibility and scope](docs/PANEL-COMPATIBILITY.md).
 
 ## Features
 
@@ -31,10 +27,10 @@ Prepare dependencies and matching H102 services using the [installation guide](d
 ```bash
 bash scripts/install_from_source.sh \
   /path/to/gnuradio-3.10.12.0-prefix \
-  "$HOME/LogicRF/hawk-h102/install/gr-logicrf/1.2.2" \
+  "$HOME/LogicRF/hawk-h102/install/gr-logicrf/1.2.3" \
   "$HOME/LogicRF/hawk-h102"
 
-python3 "$HOME/LogicRF/hawk-h102/install/gr-logicrf/1.2.2/launch.py" grc
+python3 "$HOME/LogicRF/hawk-h102/install/gr-logicrf/1.2.3/launch.py" grc
 ```
 
 The installer builds, runs offline tests, installs and verifies the bundled control source. Installation does not connect to a device or require a private Git repository. Install GNU Radio and system dependencies first. This source installation does not deploy the USB vendor library or USB host service.
