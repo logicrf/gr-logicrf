@@ -29,6 +29,8 @@
   "panel_system_update": {
     "firmware": "1.2.1-rc1",
     "raw_sha256": "b4a63ad9449f287a09daee2da2a2a148f1af713716870268058c3afb03180e04",
-    "scope": "Panel compatibility, exact firmware/SDK requirements and translated runtime identity; no native IQ algorithm changes"
-  }
+    "scope": "Panel compatibility, exact firmware/SDK requirements and translated runtime identity; no native IQ algorithm changes",
+    "paired_development_commit": "fea12a8"
+  },
+  "registration_update": "Registration verifies the imported module version against source metadata before writing a receipt"
 }
