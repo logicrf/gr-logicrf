@@ -5,8 +5,8 @@
   "helpers": {
     "board_capture.py": {
       "local_path": "control-runtime/h102_iio_demo/board_capture.py",
-      "local_sha256": "b86ed33de8df5833fe6e7f95bfff25c4b6b3c7f8726c45a36e6d16ddaf07887a",
-      "installed_sha256": "d1f30333f8fe58734396a22ed3040287a08aaaa0eca8d3ae3dd387b59eaa7360"
+      "local_sha256": "d58742e4d4fc4812c9d7757e40d1e82d9eed82555384d749357bac980c76c35e",
+      "installed_sha256": "bb90c08be44a334cd9ce3f1d718dd2e2e0d46558df0a2d566c9a306afd238799"
     },
     "board_radio.py": {
       "local_path": "control-runtime/h102_iio_demo/board_radio.py",
@@ -78,5 +78,10 @@
       "local_sha256": "130cab29f0b6bd9259a3f275a6aa2f7cff10f091dfc2e132b0a8936a670272df",
       "installed_sha256": "d567bb305dd24a013d8052aac1ebf492b63127a5ed0c09a2f9d5b29e80a9133c"
     }
+  },
+  "panel_update": {
+    "source_commit": "21a32e10bb4521791ecee4f3c4a627a2dd203d16",
+    "bit_sha256": "d6a2412cd32c767b29f08b077f9ee3eae159a5bf1188417db243e55ab33e3eff",
+    "required_service": "0.1.0-ip36-panel1"
   }
 }

@@ -1,3 +1,7 @@
+## Firmware required by this candidate
+
+This 1.2.3rc2 candidate requires the exact Kuiper 1.2.1-rc1 full-image metadata, SDK and API helpers recorded by its lock files. The image already includes IP-only control. The earlier panel1 incremental installation uses its separate 1.2.3rc1 host package. Keep these combinations distinct; do not edit a lock to force compatibility. Exact-card cold-boot acceptance of 1.2.1-rc1 is pending.
+
 # Installation and matching versions
 
 ## Host dependencies

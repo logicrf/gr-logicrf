@@ -1,15 +1,15 @@
 {
   "schema": 1,
   "product": "LogicRF Hawk H102 Kuiper",
-  "version": "1.2.0+grc-hotmeta-1",
+  "version": "1.2.1-rc1",
   "kernel": "6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1",
-  "metadata_sha256": "b7938d4b25fd141855da005c6f6bd3746ed39a5d022550e4e6f96704429d411c",
+  "metadata_sha256": "e818c7f2ee37c86256aed273e4cf11e37f1a8cb515f4d989b632471de74e8daa",
   "metadata_path": "/etc/h102/sdk1-image.json",
   "assets_count": 586,
   "files_count": 587,
   "boot_pins": {
     "/boot/BOOT.BIN": "44b478bc7f38538f99d084551151639bef8ca5fbfc6378b26a564140d147a4b4",
-    "/boot/h102_logicrf_master.bit": "efa68686339a902c5aa6ffcd36db9f4e769b9dd5c796dcea75b6928f66fa33a2",
+    "/boot/h102_logicrf_master.bit": "d6a2412cd32c767b29f08b077f9ee3eae159a5bf1188417db243e55ab33e3eff",
     "/boot/image-sdk1.ub": "d4703c4f80c937a1bbf0dd7e8292f871ce2e9757bc221d32faaff7bd147470ea",
     "/boot/uEnv.txt": "ad835b95585c58cb9b5d18344cbe9604dca8cbe16bba536eeb0d064b4fd8f3b5"
   },
@@ -124,5 +124,17 @@
     "compressed_bytes": 2759144392,
     "compressed_sha256": "5a09380de3cea3219cc2ffb2cff2a2281e03b5e1c2fee2070c4e77aa9cd170a7",
     "image_filename": "LogicRF-Hawk-H102-Kuiper-1.2.0-2024.1.img.xz"
+  },
+  "panel_addon": {
+    "version": "1.2.0-panel-1",
+    "compiled_commit": "134a61febce9d9ddf831609c252a017d033ddaf3",
+    "routed_sha256": "9ea7a88949116fd2124b0701a9974e1467cfd57cac2aeb291c6f3c5353980912",
+    "bit_sha256": "d6a2412cd32c767b29f08b077f9ee3eae159a5bf1188417db243e55ab33e3eff"
+  },
+  "image_integration": {
+    "version": "1.2.1-rc1",
+    "device_control_api": "0.1.0-ip36-panel1",
+    "base_release": "1.2.0",
+    "no_per_device_install_transaction": true
   }
 }

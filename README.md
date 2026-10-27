@@ -1,8 +1,12 @@
+## Panel system release candidate
+
+gr-logicrf 1.2.3rc2 is paired with Kuiper 1.2.1-rc1. See [firmware compatibility](docs/PANEL-COMPATIBILITY.md). The exact new SD image has not yet completed physical cold-boot acceptance.
+
 # gr-logicrf · GNU Radio for the LogicRF Hawk H102
 
 Open a `.grc` flowgraph in GNU Radio Companion, enter the H102 IP address, and receive or transmit IQ over Gigabit Ethernet IIO or a separately deployed USB 3.0 backend. C++ handles the IQ data path; Python handles configuration, bindings and session management. The interface uses GNU Radio Qt GUI.
 
-**Version: 1.2.2 (source release).** This package provides the GNU Radio module, examples, control runtime and source installer. It uses the 1.2.1 data path and works with the matching H102 services described below. It does not install or replace board firmware.
+**Version: 1.2.3rc2 (release candidate).** This package provides the GNU Radio module, examples, control runtime and source installer for the complete Kuiper 1.2.1-rc1 image. The native IQ algorithms are unchanged. Physical cold-boot acceptance of the exact image is pending. This host package does not install or replace board firmware.
 
 ## Features
 

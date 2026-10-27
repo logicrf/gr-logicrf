@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source": "/usr/local/lib/h102/sdk1/scripts",
-  "firmware_release": "1.2.0-grc-hotmeta-1",
+  "firmware_release": "1.2.1-rc1",
   "files": {
     "h102_runtime_ft601_rx.py": "2a3031107e770fb9d42e52c907999c18aad481ee2c15cf6e0f23f9a57f1a59d5",
     "run_h102_sdk1_iio_tx.py": "398c71981a08c5d21cf6905a25d325d0255f655897ef0bcab91794255a1da15b",
@@ -37,8 +37,8 @@
     "h102_sdk1_rf_r1.py": "2e55f546486d4abfa3f66bd75e67795d9491e6301479903c8959be1454c3668d",
     "h102_rf_usb_tx_storage.py": "c70fd8fb64aae7958de27a05e6843649a25c1845544b3ea8ca5653a25622395e",
     "h102_rf_usb_gnss.py": "4c8f11bc9f8e336d872304c9f358a5ac44fd0bb5b52ef4fb4106de651a06613f",
-    "h102_runtime_usb_prepare.py": "acdfab23164c9bd6d2c33e3d6275826ebbd79f00116c50d75b824a593b9ccbf9",
-    "h102_runtime_usb_rx.py": "9bc20258885010524ed88c161374e9f7ec80863d0cbf8b9604f9173f47da506b",
+    "h102_runtime_usb_prepare.py": "46d2f32b7fd04d0b4a5e23390c5aacc7c9b2e40c19aba276fc7ffc871c833907",
+    "h102_runtime_usb_rx.py": "240dddf9c8c356e844f308321874af0515d503a49e2e4ee867187137be113bd5",
     "h102_rf_usb_mixed_backend.py": "f9b4981a1a1c846cc3888ff237c4ced23861fef4651bcdaea4aed79478129cf6",
     "h102_rf_usb_mixed_restore.py": "e8dba1d8445f8ada80bf9ee99236f423907a055f83dc82457009b36da67e05d2",
     "analyze_h102_rf_iq.py": "89788827b9cd722eb82cf99fa18aa674a77937b505d9df2f0b0eb092073bc698",
@@ -97,7 +97,7 @@
     "h102_rf_usb_mixed_host_loop.py": "c25524fecd81811b54f7c4556d113e8e2554e919f382988f99fe759397d7815d",
     "h102_rf_usb_mixed_stop.py": "df803262529338889ba65c2e41a5cb7bc479cddafce21ca10179e643e6479ca6",
     "h102_rf_usb_mixed_bridge.py": "73ad22ca87606bbc92f61f8a2408495bdaabb670d9003a09fcfd06a6eabc1b4c",
-    "h102_profile_config.py": "624757047f1e7a6e68e47c2535d5c49ad26cad37228438e4b8c0a796e4a7b44d",
+    "h102_profile_config.py": "99e157411aea5bd0fa44b9872956118b317d63f3b840dfcaa6a1f8d9d38c763e",
     "h102_rf_prepared_fault.py": "d31491b498ba6f2e39ebf68d0458d4bb36dba91de314c439e5bb58729df61970",
     "h102_rf_usb_mixed_initialize.py": "1405d97bf864355974a645d27d5684331f77b58990dbac32b40cc6e8aabe4010",
     "h102_gnss_capture.py": "aaee84705ab952efe226188858f3140a6a1450db9d9ca659b2ee5c3602df2855",
@@ -112,5 +112,5 @@
     "h102_iio_owner_lock.py": "841d0d1392565574102d37fac0dac027b9887ae3ef61a3a20176b9c77031be67",
     "h102_rf_usb_mixed_auxiliary.py": "a745576dc8977992610834cd15e133aa52780cb32757e970274ab900d75e49cb"
   },
-  "input_directory": "1.2.0-grc-hotmeta-1"
+  "input_directory": "1.2.1-rc1"
 }

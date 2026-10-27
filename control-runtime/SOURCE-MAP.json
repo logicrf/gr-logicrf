@@ -22,11 +22,11 @@
     {
       "path": "control-runtime/h102_iio_demo/board_capture.py",
       "source_repository": "logicrf/hawk-h102-iio-gui",
-      "source_commit": "bf274c9391577c7326ada7ad3d3578f1468ef86a",
+      "source_commit": "21a32e10bb4521791ecee4f3c4a627a2dd203d16",
       "source_path": "h102_iio_demo/board_capture.py",
-      "source_sha256": "d1f30333f8fe58734396a22ed3040287a08aaaa0eca8d3ae3dd387b59eaa7360",
-      "candidate_sha256": "b86ed33de8df5833fe6e7f95bfff25c4b6b3c7f8726c45a36e6d16ddaf07887a",
-      "modification": "English source documentation and diagnostics"
+      "source_sha256": "bb90c08be44a334cd9ce3f1d718dd2e2e0d46558df0a2d566c9a306afd238799",
+      "candidate_sha256": "d58742e4d4fc4812c9d7757e40d1e82d9eed82555384d749357bac980c76c35e",
+      "modification": "English source documentation; explicit reviewed panel d6 ADC ABI"
     },
     {
       "path": "control-runtime/h102_iio_demo/board_radio.py",

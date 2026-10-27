@@ -25,7 +25,7 @@ class UsbCandidateTests(unittest.TestCase):
     """Extend continuous/arbitrary IQ only without weakening two-second permits or original restoration."""
     def test_radio_candidate_compiles_exact_source_closure(self):
         """RF insertion points must match the full pinned SDK and include restoration/immediate shutdown."""
-        project=Path(os.environ['LOGICRF_PROJECT_ROOT']);source=project/'envs/h102-sdk-runtime-input/1.2.0-grc-hotmeta-1'
+        project=Path(os.environ['LOGICRF_PROJECT_ROOT']);source=project/'envs/h102-sdk-runtime-input'/json.loads((Path(__file__).resolve().parents[1]/'docs/h102-usb-sdk.lock.json').read_text())['input_directory']
         if not source.is_dir():self.skipTest('external pinned H102 SDK source inputs not installed')
         repo=Path(__file__).resolve().parents[1]
         lock=json.loads((repo/'docs/h102-usb-sdk.lock.json').read_text())
@@ -51,7 +51,7 @@ class UsbCandidateTests(unittest.TestCase):
         project=Path(os.environ['LOGICRF_PROJECT_ROOT']);repo=Path(__file__).resolve().parents[1]
         results=[]
         for version,lock_name in [('1.2.0','h102-usb-sdk-1.2.0.lock.json'),
-                                  ('1.2.0-grc-hotmeta-1','h102-usb-sdk.lock.json')]:
+                                  (json.loads((repo/'docs/h102-usb-sdk.lock.json').read_text())['input_directory'],'h102-usb-sdk.lock.json')]:
             source=project/'envs/h102-sdk-runtime-input'/version
             if not source.is_dir():self.skipTest('external pinned '+version+' SDK not installed')
             lock=json.loads((repo/'docs'/lock_name).read_text())
@@ -68,7 +68,7 @@ class UsbCandidateTests(unittest.TestCase):
     def test_generated_cold_capabilities_and_configuration_guards(self):
         """Execute generated code with modeled hardware; cap3 never exempts identity/parameter/source-idle checks."""
         project=Path(os.environ['LOGICRF_PROJECT_ROOT'])
-        source=project/'envs/h102-sdk-runtime-input/1.2.0-grc-hotmeta-1'
+        source=project/'envs/h102-sdk-runtime-input'/json.loads((Path(__file__).resolve().parents[1]/'docs/h102-usb-sdk.lock.json').read_text())['input_directory']
         if not source.is_dir():self.skipTest('external pinned H102 SDK source inputs not installed')
         lock=json.loads((Path(__file__).resolve().parents[1]/'docs/h102-usb-sdk.lock.json').read_text())
         with tempfile.TemporaryDirectory(prefix='usb-capability-',dir=project/'tmp') as root:
@@ -130,7 +130,7 @@ print(json.dumps(dict(accepted=[1,3],rejected=[0,2,7],configuration_guards=True,
             self.assertEqual(json.loads(result.stdout)['accepted'],[1,3])
 
     def test_actual_candidate_state_machine_and_checker_restore(self):
-        project=Path(os.environ['LOGICRF_PROJECT_ROOT']);source=project/'envs/h102-sdk-runtime-input/1.2.0-grc-hotmeta-1'
+        project=Path(os.environ['LOGICRF_PROJECT_ROOT']);source=project/'envs/h102-sdk-runtime-input'/json.loads((Path(__file__).resolve().parents[1]/'docs/h102-usb-sdk.lock.json').read_text())['input_directory']
         if not source.is_dir():self.skipTest('external pinned H102 SDK source inputs not installed')
         lock=json.loads((Path(__file__).resolve().parents[1]/'docs/h102-usb-sdk.lock.json').read_text())
         with tempfile.TemporaryDirectory(prefix='usb-candidate-',dir=project/'tmp') as root:

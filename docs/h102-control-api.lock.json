@@ -5,10 +5,11 @@
   "client_version": "0.1.0",
   "minimum_installation": "0.1.0-ip5",
   "files": {
-    "python/h102_control/__init__.py": "9d333bcf17569550aa340a2d001202fe12d1dee34fa6c1e31066396067fd8430",
-    "python/h102_control/channel.py": "fb8df410d41e54e9dd512dfa4c918aef1c9d4d48a5152ae1d87d916186d5b95f",
-    "python/h102_control/client.py": "3d15c16fd5647c5afbec6d1d9f40c004f74c619b5d0f81a16609e39b70dee911",
-    "python/h102_control/compat.py": "c7655b945ed02b4a146ace8a0cf8cc1afdae7045fb21ef063ec9023e6e133da0",
-    "python/h102_control/protocol.py": "42c1eaba2b23833b9aa1452482f674deb080ac92821d8b6adf94fc48e378e459"
-  }
+    "python/h102_control/__init__.py": "cf22f412cd87e88679e4cc3710a6767d23d2401ddfb9f07996754fe14a3e1a33",
+    "python/h102_control/channel.py": "b2cf7d6fe91d5cf12b044a0d192348633782c48338c4b30927bd0b17503ac362",
+    "python/h102_control/client.py": "2ebaac23e6472a9d919c1ff23f39c50f9d96b37a75ddcbc2214f6d63766228a1",
+    "python/h102_control/compat.py": "06d2834b7e250c247db582867caa197534740479e0944c21236b0f81dced8c95",
+    "python/h102_control/protocol.py": "92f2113f1c4e6a4de0bef4093cba5ec8e08ddcec1f522bff6f9fc273ff05b8a4"
+  },
+  "panel_update": "Reviewed helper map for the exact panel d6 board source; client protocol unchanged"
 }

@@ -201,7 +201,7 @@ class UsbReuseTests(unittest.TestCase):
 
     def test_rendered_state_and_recovery_model(self):
         project = Path(os.environ['LOGICRF_PROJECT_ROOT'])
-        sdk = project/'envs/h102-sdk-runtime-input/1.2.0-grc-hotmeta-1'
+        sdk = project/'envs/h102-sdk-runtime-input'/json.loads((Path(__file__).resolve().parents[1]/'docs/h102-usb-sdk.lock.json').read_text())['input_directory']
         if not sdk.is_dir():self.skipTest('external pinned H102 SDK source input not installed')
         repo = Path(__file__).resolve().parents[1]
         lock = json.loads((repo/'docs/h102-usb-sdk.lock.json').read_text())

@@ -24,8 +24,9 @@ import time
 BIT_SHA256 = 'd81b6988b5f52b2fe1e03a86ba23508d7096560a9a60e011fd17c71c199974aa'
 """Original 1.2.0 release bitstream; keep this name for callers identifying its historical scope."""
 SUPPORTED_BIT_SHA256 = frozenset((BIT_SHA256,
+    'd6a2412cd32c767b29f08b077f9ee3eae159a5bf1188417db243e55ab33e3eff',
     'efa68686339a902c5aa6ffcd36db9f4e769b9dd5c796dcea75b6928f66fa33a2'))
-"""Accept only D81 and cap3 bitstreams verified against the same ADI ADC address/version/overflow ABI."""
+"""Accept only D81, EFA and panel d6 bitstreams reviewed against the same ADC address/version/overflow ABI."""
 
 
 class OverflowGuard:

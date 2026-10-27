@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(gr-logicrf VERSION 1.2.2 LANGUAGES C CXX)
+project(gr-logicrf VERSION 1.2.3 LANGUAGES C CXX)
 # Native IQ hot paths need optimized code; explicit Debug and multi-config builds remain available.
 if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING "Build type for native IQ processing" FORCE)

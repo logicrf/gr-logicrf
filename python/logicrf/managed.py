@@ -41,8 +41,9 @@ def configure_native(native,profile,rate,frequency):
 
 
 SUPPORTED_RUNTIME_COMMITS = ('f782657cc911834d31bf136da5b19260e25aeea8',
-    'bf274c9391577c7326ada7ad3d3578f1468ef86a')
-"""Accept frozen legacy runtime and verified cap3 ADC updates only; check every file's full SHA."""
+    'bf274c9391577c7326ada7ad3d3578f1468ef86a',
+    '21a32e10bb4521791ecee4f3c4a627a2dd203d16')
+"""Accept only the frozen legacy, cap3 and panel runtime revisions; verify every file SHA."""
 
 
 def default_runtime(project, lock_path):
