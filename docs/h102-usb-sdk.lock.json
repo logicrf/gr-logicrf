@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source": "/usr/local/lib/h102/sdk1/scripts",
-  "firmware_release": "1.2.1-rc1",
+  "firmware_release": "1.2.1-rc2",
   "files": {
     "h102_runtime_ft601_rx.py": "2a3031107e770fb9d42e52c907999c18aad481ee2c15cf6e0f23f9a57f1a59d5",
     "run_h102_sdk1_iio_tx.py": "398c71981a08c5d21cf6905a25d325d0255f655897ef0bcab91794255a1da15b",
@@ -112,5 +112,5 @@
     "h102_iio_owner_lock.py": "841d0d1392565574102d37fac0dac027b9887ae3ef61a3a20176b9c77031be67",
     "h102_rf_usb_mixed_auxiliary.py": "a745576dc8977992610834cd15e133aa52780cb32757e970274ab900d75e49cb"
   },
-  "input_directory": "1.2.1-rc1"
+  "input_directory": "1.2.1-rc2"
 }

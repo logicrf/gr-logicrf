@@ -10,7 +10,7 @@
 @version 0.2.0
 @date 2026-10-16
 """
-__version__ = "1.2.3rc2"
+__version__ = "1.2.3rc3"
 
 from pathlib import Path
 import os

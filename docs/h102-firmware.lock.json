@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "product": "LogicRF Hawk H102 Kuiper",
-  "version": "1.2.1-rc1",
+  "version": "1.2.1-rc2",
   "kernel": "6.6.0-h102-sdk1-candidate-calfix1-regbounds1-sharedlo1",
-  "metadata_sha256": "e818c7f2ee37c86256aed273e4cf11e37f1a8cb515f4d989b632471de74e8daa",
+  "metadata_sha256": "7b58e2f3eb0d8427d35af6378e91f7c138e9386b2f0acf981830ebf79aeafd42",
   "metadata_path": "/etc/h102/sdk1-image.json",
   "assets_count": 586,
   "files_count": 587,
@@ -132,7 +132,7 @@
     "bit_sha256": "d6a2412cd32c767b29f08b077f9ee3eae159a5bf1188417db243e55ab33e3eff"
   },
   "image_integration": {
-    "version": "1.2.1-rc1",
+    "version": "1.2.1-rc2",
     "device_control_api": "0.1.0-ip36-panel1",
     "base_release": "1.2.0",
     "no_per_device_install_transaction": true

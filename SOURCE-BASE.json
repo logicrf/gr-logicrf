@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.2.3rc2",
+  "version": "1.2.3rc3",
   "module_base_commit": "f5342026acc6b35e1536ba1913505244f8adc0cb",
   "control_base_commit": "21a32e10bb4521791ecee4f3c4a627a2dd203d16",
   "control_source_map": "control-runtime/SOURCE-MAP.json",
@@ -27,10 +27,10 @@
     "hardware_qualification": "Existing exact-version evidence only; no new RF, profile-matrix, temperature or multi-board qualification"
   },
   "panel_system_update": {
-    "firmware": "1.2.1-rc1",
-    "raw_sha256": "b4a63ad9449f287a09daee2da2a2a148f1af713716870268058c3afb03180e04",
+    "firmware": "1.2.1-rc2",
+    "raw_sha256": "ce03f2d9cc496842548996bb18e14e5c2e4bfea10842dbc701bf7fb9833eec92",
     "scope": "Panel compatibility, exact firmware/SDK requirements and translated runtime identity; no native IQ algorithm changes",
-    "paired_development_commit": "fea12a8"
+    "paired_development_commit": "cb06f8d87c19cf0e101075785aae0a2ccbc1ea4b"
   },
   "registration_update": "Registration verifies the imported module version against source metadata before writing a receipt"
 }
