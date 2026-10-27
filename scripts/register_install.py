@@ -9,13 +9,14 @@
 @architect LogicRF
 @email info@logicrf.com
 @website https://www.logicrf.com
-@version 1.2.2
-@date 2026-10-20
+@version 1.2.3
+@date 2026-10-27
 """
 import argparse
 import hashlib
 import json
 from pathlib import Path
+import re
 import shutil
 import subprocess
 
@@ -36,11 +37,15 @@ def main():
     if any((prefix/name).exists() for name in ('installation.json','launch.py')):
         raise FileExistsError('INSTALLATION_ALREADY_REGISTERED')
     project.mkdir(parents=True,exist_ok=True)
-    identifier='1.2.2-'+hashlib.sha256(str(prefix).encode()).hexdigest()[:12]
+    source=Path(__file__).resolve().parent
+    registered_version=json.loads((source.parent/'SOURCE-BASE.json').read_text())['version']
+    if not re.fullmatch(r'\d+\.\d+\.\d+(?:rc\d+)?',registered_version):
+        raise ValueError('SOURCE_RELEASE_VERSION')
+    identifier=registered_version+'-'+hashlib.sha256(str(prefix).encode()).hexdigest()[:12]
     desktop=args.desktop_dir.resolve()/('logicrf-gnuradio-'+identifier+'.desktop') if args.desktop_dir else None
     if desktop and desktop.exists():raise FileExistsError('DESKTOP_ENTRY_ALREADY_EXISTS')
     installation=dict(schema=1,module_prefix=str(prefix),gnuradio_prefix=str(gnu),
-        project_root=str(project),installation_id=identifier,version='1.2.2',
+        project_root=str(project),installation_id=identifier,version=registered_version,
         qualification='SOURCE_INSTALL_OFFLINE_VERIFIED')
     env=environment(installation)
     version=subprocess.check_output([str(gnu/'bin/gnuradio-config-info'),'--version'],env=env,text=True).strip()
@@ -69,7 +74,7 @@ print('LOGICRF_PREFLIGHT_JSON='+json.dumps(dict(module=str(module),runtime=str(r
     identity=probe_identity(result.stdout)
     if not Path(identity['module']).is_relative_to(prefix):raise RuntimeError('OTHER_MODULE_IMPORTED')
     if not Path(identity['runtime']).is_relative_to(prefix):raise RuntimeError('EXTERNAL_CONTROL_RUNTIME')
-    source=Path(__file__).resolve().parent
+    if identity['version']!=registered_version:raise RuntimeError('INSTALLED_SOURCE_VERSION_MISMATCH')
     shutil.copy2(source/'grc_user_launcher.py',prefix/'launch.py')
     (prefix/'installation.json').write_text(json.dumps(installation,indent=2)+'\n')
     if desktop:
